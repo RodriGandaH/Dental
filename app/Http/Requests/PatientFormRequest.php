@@ -27,7 +27,7 @@ class PatientFormRequest extends FormRequest
    'name'      => ['required', 'string', 'max:255'],
    'birthdate' => ['required', 'date'],
    'ci'        => ['required', 'numeric', 'unique:patients,ci'],
-   'phone'     => ['required', 'numeric'],
+   'phone'     => ['required', 'numeric', 'unique:patients,phone'],
    'address'   => ['required', 'string', 'max:255'],
   ];
  }

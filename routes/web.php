@@ -30,13 +30,14 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(PatientController::class)->group(function () {
+ Route::get('/pacientes', [PatientController::class, 'index'])->name('patient.index');
  Route::get('/nuevo-paciente', [PatientController::class, 'create'])->name('patient.create');
  Route::post('/nuevo-paciente', [PatientController::class, 'store'])->name('patient.store');
 
- /* Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
+ /* Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');*/
 
-Route::get('/patients/{patient}', [PatientController::class, 'show'])->name('patients.show');
-Route::get('/patients/{patient}/edit', [PatientController::class, 'edit'])->name('patients.edit');
+ Route::get('/paciente/{id}', [PatientController::class, 'show'])->name('patient.show');
+/*Route::get('/patients/{patient}/edit', [PatientController::class, 'edit'])->name('patients.edit');
 Route::patch('/patients/{patient}', [PatientController::class, 'update'])->name('patients.update');
 Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->name('patients.destroy'); */
 });
