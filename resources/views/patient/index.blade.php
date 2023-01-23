@@ -34,21 +34,21 @@
                                     href="{{ route('patient.index', ['sort' => 'id', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Id</a>
                             </th>
                             <th class="py-4 px-6 border-b-2 border-gray-200"><a
-                                    href="{{ route('patient.index', ['sort' => 'name', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Nombre</a>
+                                    href="{{ route('patient.index', ['sort' => 'nombre', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Nombre</a>
                             </th>
-                            <th class="py-4 px-6 border-b-2 border-gray-200"><a
+                            {{-- <th class="py-4 px-6 border-b-2 border-gray-200"><a
                                     href="{{ route('patient.index', ['sort' => 'birthdate', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Fecha
                                     de nacimiento</a>
-                            </th scope=>
+                            </th> --}}
                             <th class="py-4 px-6 border-b-2 border-gray-200"><a
-                                    href="{{ route('patient.index', ['sort' => 'ci', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">CI</a>
+                                    href="{{ route('patient.index', ['sort' => 'cedula', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">CI</a>
                             </th>
                             <th class="py-4 px-6 border-b-2 border-gray-200"><a
-                                    href="{{ route('patient.index', ['sort' => 'phone', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Teléfono</a>
+                                    href="{{ route('patient.index', ['sort' => 'telefono', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Teléfono</a>
                             </th>
                             <th class=" py-4 px-6 border-b-2 border-gray-200 ">
                                 <a
-                                    href="{{ route('patient.index', ['sort' => 'address', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Direccion</a>
+                                    href="{{ route('patient.index', ['sort' => 'direccion', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Direccion</a>
                             </th>
                             <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Ver</th>
                         </tr>
@@ -57,11 +57,12 @@
                         @forelse ($patients as $patient)
                         <tr class="hover:bg-gray-200">
                             <td class="py-4 px-6 border-b border-gray-200">{{ $patient->id }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->name }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->birthdate }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->ci }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->phone }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->address }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->nombre }}</td>
+                            {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $patient->fecha_nacimiento }}</td>
+                            --}}
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->cedula }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->telefono }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $patient->direccion }}</td>
                             <td class="py-4 px-6 border-b border-gray-200">
                                 <a class=" inline-flex items-center px-4 py-2 bg-blue-500 border border-gray-300
                                     rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm

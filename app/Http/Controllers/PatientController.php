@@ -17,9 +17,9 @@ class PatientController extends Controller
 
   $patients = Patient::where('user_id', auth()->user()->id)
    ->when($search, function ($query, $search) {
-    return $query->where('name', 'like', "%{$search}%")
-     ->orWhere('ci', 'like', "%{$search}%")
-     ->orWhere('phone', 'like', "%{$search}%");
+    return $query->where('nombre', 'like', "%{$search}%")
+     ->orWhere('cedula', 'like', "%{$search}%")
+     ->orWhere('telefono', 'like', "%{$search}%");
    })
    ->orderBy($sort, $order)
    ->paginate(5);
@@ -72,8 +72,8 @@ class PatientController extends Controller
    'desmayos_descp'              => $data['desmayos_descp'],
    'sangra_mucho'                => $data['sangra_mucho'],
    'sangra_mucho_descp'          => $data['sangra_mucho_descp'],
-   'cicratizar_heridas'          => $data['cicratizar_heridas'],
-   'cicratizar_heridas_descp'    => $data['cicratizar_heridas_descp'],
+   'cicatrizar_heridas'          => $data['cicatrizar_heridas'],
+   'cicatrizar_heridas_descp'    => $data['cicatrizar_heridas_descp'],
    'sida'                        => $data['sida'],
    'sida_descp'                  => $data['sida_descp'],
    'comentarios'                 => $data['comentarios'],
