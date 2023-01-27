@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center">
             {{ __('Nuevo Paciente') }}
         </h2>
     </x-slot>
@@ -15,7 +15,7 @@
                         @csrf
                         <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                             <div class="md:col-span-4 sm:col-span-1">
-                                <x-input-label for="nombre" :value="__('Nombre Completo')" />
+                                <x-input-label for="nombre" :value="__('Nombre completo')" />
                                 <x-text-input id="nombre" class="block mt-1 w-full" type="text" name="nombre"
                                     :value="old('nombre')" />
                                 @error('nombre')
