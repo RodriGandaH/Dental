@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TratamientoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,13 @@ Route::controller(PatientController::class)->group(function () {
 /*Route::get('/patients/{patient}/edit', [PatientController::class, 'edit'])->name('patients.edit');
 Route::patch('/patients/{patient}', [PatientController::class, 'update'])->name('patients.update');
 Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->name('patients.destroy'); */
+});
+
+Route::controller(TratamientoController::class)->group(function () {
+ Route::get('/pacientes/{patient}/tratamientos', [TratamientoController::class, 'index'])->name('tratamiento.index');
+ Route::get('/pacientes/{patient}/tratamientos/nuevo', [TratamientoController::class, 'create'])->name('tratamiento.create');
+ Route::post('/nuevo-tratamiento', [TratamientoController::class, 'store'])->name('tratamiento.store');
+ Route::get('/tratamiento/{id}', [TratamientoController::class, 'show'])->name('tratamiento.show');
 });
 
 require __DIR__ . '/auth.php';

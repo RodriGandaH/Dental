@@ -26,6 +26,7 @@ return new class extends Migration
    $table->date("fecha_inicio");
    $table->date("fecha_fin");
    $table->string("observaciones");
+   $table->boolean("estado")->default(0);
    $table->timestamps();
   });
  }
