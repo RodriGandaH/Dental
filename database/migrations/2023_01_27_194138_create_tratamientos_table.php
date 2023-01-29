@@ -20,13 +20,13 @@ return new class extends Migration
 
    $table->string('diente');
    $table->string('diagnostico');
-   $table->tinyInteger("rx")->default(0);
+   $table->boolean("rx")->default(0)->nullable();
    $table->string("tratamiento");
    $table->decimal("costo");
    $table->date("fecha_inicio");
-   $table->date("fecha_fin");
-   $table->string("observaciones");
-   $table->boolean("estado")->default(0);
+   $table->date("fecha_fin")->nullable();
+   $table->string("observaciones")->nullable();
+   $table->boolean("estado")->default(0)->nullable();
    $table->timestamps();
   });
  }

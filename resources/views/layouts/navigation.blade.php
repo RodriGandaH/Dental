@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('patient.index')"
-                        :active="request()->routeIs('patient.index','patient.create','patient.show')">
+                        :active="request()->routeIs('patient.index','patient.create','patient.show','tratamiento.index','tratamiento.create')">
                         {{ __('Pacientes') }}
                     </x-nav-link>
                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Pago;
 use App\Models\Tratamiento;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -62,6 +63,11 @@ class Patient extends Model
  public function tratamientos()
  {
   return $this->hasMany(Tratamiento::class);
+ }
+
+ public function pagos()
+ {
+  return $this->hasMany(Pago::class);
  }
 
 }

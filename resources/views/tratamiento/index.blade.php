@@ -41,8 +41,38 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse ($tratamientos as $tratamiento)
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->id }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->tratamiento }}</td>
+                            {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $patient->fecha_nacimiento }}</td>
+                            --}}
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->fecha_inicio }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
+                            {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->abonado }}</td> --}}
 
+                            <td>
+                                <a class=" inline-flex items-center px-4 py-2 bg-blue-500 border border-gray-300
+                                                        rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm
+                                                        hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
+                                    type="button"
+                                    href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Ver</a>
+                            </td>
+
+                        </tr>
+                        @empty
+                        <tr>
+                            <td class="text-center pt-4" colspan="6">Este paciente no tiene tratamientos</td>
+                            @endforelse
+                    </tbody>
                 </table>
+                <br>
+
+                {{ $tratamientos->links() }}
 
 
 
