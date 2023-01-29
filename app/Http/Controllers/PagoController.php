@@ -32,12 +32,14 @@ class PagoController extends Controller
  {
 
   // Aquí podrías validar que el paciente y el tratamiento existan en la base de datos antes de continuar
-  $patient     = Patient::findOrFail($patient);
-  $tratamiento = Tratamiento::findOrFail($tratamiento);
-  $pagos       = $tratamiento->pagos;
+  $patient         = Patient::findOrFail($patient);
+  $tratamiento     = Tratamiento::findOrFail($tratamiento);
+  $pagos           = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
+  $cantidad_pagada = $pagos->sum('abono');
+  $saldo_pendiente = $tratamiento->costo - $cantidad_pagada;
 
   // Luego podrías retornar la vista para crear un nuevo pago, pasando el paciente y tratamiento como parámetros
-  return view('pago.create', compact('patient', 'tratamiento', 'pagos'));
+  return view('pago.create', compact('patient', 'tratamiento', 'pagos', 'cantidad_pagada', 'saldo_pendiente'));
  }
 
  /**

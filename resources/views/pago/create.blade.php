@@ -13,23 +13,22 @@
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                         <div class="md:col-span-4 sm:col-span-1">
                             <p><b>Costo Total</b> <br></p>
-                            <p>{{$tratamiento->costo}}</p>
+                            <p>{{$tratamiento->costo}} Bs.</p>
                         </div>
                         <div class="md:col-span-4 sm:col-span-1">
 
 
                             <p><b>Pagado</b> <br></p>
-                            @if($pagos->count() != 0)
-                            <p>{{$tratamiento->abono}}</p>
-                            @endif
+
+                            <p>{{number_format($cantidad_pagada,2)}} Bs.</p>
+
                         </div>
                         <div class="md:col-span-4 sm:col-span-1">
 
                             <p><b>Saldo pendiente</b> <br></p>
-                            @if ($pagos->count() != 0)
-                            <p>{{$tratamiento->saldo_pendiente}}</p>
+                            <p>{{number_format($saldo_pendiente,2)}} Bs.</p>
 
-                            @endif
+
                         </div>
 
                     </div>
@@ -42,7 +41,7 @@
                             <b>
                                 Abono
                             </b>
-                            <x-text-input id="abono" class="block mt-1 w-full" type="number" name="abono"
+                            <x-text-input id="abono" class="block mt-1 w-full" type="text" name="abono"
                                 :value="old('abono')" />
                             @error('abono')
                             <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
