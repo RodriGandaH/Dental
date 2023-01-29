@@ -42,7 +42,8 @@
                             <p><b>Costo </b> <br> {{$tratamiento->costo}} </p>
                         </div>
                         <div class="md:col-span-1 sm:col-span-1">
-                            <p><b>Fecha de inicio </b> <br> {{$tratamiento->fecha_inicio}} </p>
+                            <p><b>Fecha de inicio </b> <br> {{date('d/m/Y',
+                                strtotime($tratamiento->fecha_inicio))}} </p>
 
                         </div>
 
@@ -53,7 +54,8 @@
                             @if ($tratamiento->fecha_fin == null)
                             <p>Aun no se finalizó</p>
                             @else
-                            <p>{{$tratamiento->fecha_fin}}</p>
+                            <p>{{date('d/m/Y',
+                                strtotime($tratamiento->fecha_fin))}}</p>
                             @endif
                         </div>
                         <div class="md:col-span-3 sm:col-span-1">
@@ -83,6 +85,8 @@
                     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-800">
 
 
+                    <h2 class="font-bold text-xl text-center">Pagos realizados</h2>
+
 
                     <div class="flex justify-start">
 
@@ -93,6 +97,38 @@
                             href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
                             Pago</a>
                     </div>
+                    <table class=" text-left w-full border-collapse mt-6 table-responsive">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class=" py-4 px-6 border-b-2 border-gray-200 ">
+                                    <a>Costo</a>
+                                </th>
+                                <th class="py-4 px-6 border-b-2 border-gray-200"><a>Abonado</a>
+                                </th>
+                                <th class="py-4 px-6 border-b-2 border-gray-200"><a>Restante</a>
+
+                                <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($pagos as $pago)
+                            <tr class="hover:bg-gray-200">
+                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->costo }}</td>
+                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->abono }}</td>
+                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->saldo_pendiente }}</td>
+                                <td class="py-4 px-6 border-b border-gray-200">{{date('d/m/Y',
+                                    strtotime($pago->fecha_pago)) }}</td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td class="text-center pt-4" colspan="6">Este paciente aun no realizo pagos</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                    <br>
+
+
 
                 </div>
             </div>

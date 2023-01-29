@@ -1,14 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center">
-            {{ __('Nuevo Pago') }}
+        <h2 class="font-semibold text-2xl text-gray-800 leading-tight text-center">
+            {{ __('Pagos') }}
         </h2>
     </x-slot>
     <div class="py-2">
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="py-4 px-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-
+                <h2 class="font-bold text-2xl">Nuevo pago</h2>
+                <br>
                 <form action="" method="POST">
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                         <div class="md:col-span-4 sm:col-span-1">
@@ -64,6 +65,7 @@
                     </div>
                 </form>
             </div>
+
         </div>
     </div>
 </x-app-layout>

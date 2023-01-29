@@ -73,7 +73,8 @@ class TratamientoController extends Controller
  {
   $tratamiento = Tratamiento::where('patient_id', $patient)->where('id', $tratamiento)->first();
   $patient     = Patient::find($patient);
-  return view('tratamiento.show', compact('tratamiento', 'patient'));
+  $pagos       = $tratamiento->pagos()->where('patient_id', $patient->id)->get();
+  return view('tratamiento.show', compact('pagos', 'patient', 'tratamiento'));
  }
 
  /**

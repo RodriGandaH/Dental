@@ -17,11 +17,11 @@ class PagoController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
- public function index(Request $request, Patient $patient, Tratamiento $tratamiento)
+ /* public function index(Request $request, Patient $patient, Tratamiento $tratamiento)
  {
-  $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->paginate(10);
-  return view('pago.index', compact('pagos', 'patient', 'tratamiento'));
- }
+ $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->paginate(10);
+ return view('tratamiento.show', compact('pagos', 'patient', 'tratamiento'));
+ } */
 
  /**
   * Show the form for creating a new resource.
@@ -50,10 +50,18 @@ class PagoController extends Controller
   */
  public function store(PagoFormRequest $request, Patient $patient, Tratamiento $tratamiento)
  {
+
   $data = $request->validated();
 
-  $costo = $tratamiento->costo;
-  $saldo = $costo - $data['abono'];
+  $costo       = $tratamiento->costo;
+  $abono_total = 0;
+
+  $pagos = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
+  foreach ($pagos as $pago) {
+   $abono_total += $pago->abono;
+  }
+
+  $saldo = $costo - $abono_total - $data['abono'];
 
   $pago = Pago::create([
    'patient_id'      => $patient->id,
