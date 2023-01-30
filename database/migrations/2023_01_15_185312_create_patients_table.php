@@ -54,6 +54,7 @@ return new class extends Migration
    $table->string('sida');
    $table->string('sida_descp')->nullable();;
    $table->string('comentarios');
+   $table->double('deuda')->default(0);
    $table->timestamps();
 
   });

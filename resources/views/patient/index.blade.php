@@ -49,6 +49,9 @@
                                 <a
                                     href="{{ route('patient.index', ['sort' => 'direccion', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Direccion</a>
                             </th>
+                            <th>
+                                <span>Deuda</span>
+                            </th>
                             <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Ver</th>
                         </tr>
                     </thead>
@@ -62,6 +65,9 @@
                             <td class="py-4 px-6 border-b border-gray-200">{{ $patient->cedula }}</td>
                             <td class="py-4 px-6 border-b border-gray-200">{{ $patient->telefono }}</td>
                             <td class="py-4 px-6 border-b border-gray-200">{{ $patient->direccion }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ $deudas[$patient->id] }} </td>
+
+
                             <td class="py-4 px-6 border-b border-gray-200">
                                 <a class=" inline-flex items-center px-4 py-2 bg-blue-500 border border-gray-300
                                     rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm

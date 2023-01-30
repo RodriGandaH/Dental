@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TratamientoFormRequest;
 use App\Models\Patient;
 use App\Models\Tratamiento;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TratamientoController extends Controller
@@ -18,6 +19,20 @@ class TratamientoController extends Controller
  public function index(Request $request, Patient $patient)
  {
   $tratamientos = $patient->tratamientos()->paginate(10);
+  foreach ($tratamientos as $tratamiento) {
+   $abonado         = 0;
+   $saldo_pendiente = $tratamiento->costo;
+
+   if ($tratamiento->pagos->count() > 0) {
+    foreach ($tratamiento->pagos as $pago) {
+     $abonado += $pago->abono;
+     $saldo_pendiente -= $pago->abono;
+    }
+   }
+
+   $tratamiento->abonado         = $abonado;
+   $tratamiento->saldo_pendiente = $saldo_pendiente;
+  }
 
   return view('tratamiento.index', compact('tratamientos', 'patient'));
 
@@ -106,6 +121,16 @@ class TratamientoController extends Controller
   * @param  \App\Models\Tratamiento  $tratamiento
   * @return \Illuminate\Http\Response
   */
+
+ public function finalizarTratamiento($patientId, $tratamientoId)
+ {
+  $tratamiento            = Tratamiento::find($tratamientoId);
+  $tratamiento->estado    = 1;
+  $tratamiento->fecha_fin = Carbon::now();
+  $tratamiento->save();
+  return redirect()->route('tratamiento.show', [$patientId, $tratamientoId]);
+ }
+
  public function destroy(Tratamiento $tratamiento)
  {
   //

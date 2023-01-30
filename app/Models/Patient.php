@@ -53,6 +53,7 @@ class Patient extends Model
   'sida',
   'sida_descp',
   'comentarios',
+  'deuda',
 
  ];
 

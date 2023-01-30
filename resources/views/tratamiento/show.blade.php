@@ -24,7 +24,7 @@
                         <div class="md:col-span-3 sm:col-span-1">
                             <p><b>Diagnostico </b> <br> {{$tratamiento->diagnostico}} </p>
                         </div>
-                        <div class="md:col-span-2 sm:col-span-1">
+                        <div class="md:col-span-1 sm:col-span-1">
                             <p><b>Rayos X</b> <br>
                                 @if ($tratamiento->rayos_x == 1)
                             <p>Si</p>
@@ -33,13 +33,13 @@
                             @endif
                             </p>
                         </div>
-                        <div class="md:col-span-1 sm:col-span-1">
+                        <div class="md:col-span-3 sm:col-span-1">
                             <p><b>Tratamiento </b> <br>
                                 {{ $tratamiento->tratamiento }}
                             </p>
                         </div>
-                        <div class="md:col-span-2 sm:col-span-1">
-                            <p><b>Costo </b> <br> {{$tratamiento->costo}} </p>
+                        <div class="md:col-span-1 sm:col-span-1">
+                            <p><b>Costo </b> <br> <span class="bg-green-400">{{$tratamiento->costo}}</span> </p>
                         </div>
                         <div class="md:col-span-1 sm:col-span-1">
                             <p><b>Fecha de inicio </b> <br> {{date('d/m/Y',
@@ -72,11 +72,25 @@
                                 <b>Estado</b> <br>
                             </p>
                             @if ($tratamiento->estado == 0)
-                            <p>En proceso</p>
+                            <p>En curso</p>
                             @else
                             <p>Finalizado</p>
                             @endif
 
+                        </div>
+                        <div class="flex justify-start md:col-span-4 sm:col-span-1">
+
+                            @if($tratamiento->estado == 0)
+
+                            <a class="inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
+                                                                border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
+                                                                focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
+                                                                duration-150" type="button"
+                                href="{{ route('tratamiento.finalizar', [$patient->id, $tratamiento->id]) }}">Finalizar
+                                Tratamiento</a>
+                            @else
+
+                            @endif
                         </div>
 
 
@@ -97,35 +111,68 @@
                             href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
                             Pago</a>
                     </div>
-                    <table class=" text-left w-full border-collapse mt-6 table-responsive">
+                    <table class="text-left w-1/2 mx-auto border-collapse  mt-6 table-responsive">
                         <thead>
                             <tr class="bg-gray-100">
-                                <th class=" py-4 px-6 border-b-2 border-gray-200 ">
-                                    <a>Costo</a>
+                                <th class="w-1/12 py-4 px-6 border-b-2 border-gray-200 ">
+                                    <a>Nro</a>
                                 </th>
                                 <th class="py-4 px-6 border-b-2 border-gray-200"><a>Abonado</a>
                                 </th>
                                 <th class="py-4 px-6 border-b-2 border-gray-200"><a>Restante</a>
 
                                 <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Fecha</th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($pagos as $pago)
+                            @forelse ($pagos as $key => $pago)
                             <tr class="hover:bg-gray-200">
-                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->costo }}</td>
+                                <td class="w-1/12 py-4 px-6 border-b border-gray-200">{{$key+1}}</td>
                                 <td class="py-4 px-6 border-b border-gray-200">{{ $pago->abono }}</td>
                                 <td class="py-4 px-6 border-b border-gray-200">{{ $pago->saldo_pendiente }}</td>
                                 <td class="py-4 px-6 border-b border-gray-200">{{date('d/m/Y',
                                     strtotime($pago->fecha_pago)) }}</td>
+                            </tr>
+                            <tr>
+
                             </tr>
                             @empty
                             <tr>
                                 <td class="text-center pt-4" colspan="6">Este paciente aun no realizo pagos</td>
                             </tr>
                             @endforelse
+                            @if(count($pagos) > 0)
+
+
+
+                            @if($pagos->sum('abono') == $tratamiento->costo)
+
+                            <tr class="bg-green-400">
+                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl"> <b>Total</b>
+                                </td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-bold "> <b>{{
+                                        $pagos->sum('abono')
+                                        }}</b></td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="2">
+                                    <b>El tratamiento esta pagado</b>
+                                </td>
+                            </tr>
+                            @else
+                            <tr class="bg-orange-300">
+                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl"> <b>Total</b>
+                                </td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="3"> <b>{{
+                                        $pagos->sum('abono')
+                                        }}</b></td>
+                            </tr>
+
+                            @endif
+
+                            @endif
                         </tbody>
                     </table>
+
                     <br>
 
 

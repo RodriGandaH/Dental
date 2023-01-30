@@ -48,6 +48,7 @@ Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->nam
   Route::get('/pacientes/{patient}/tratamientos/nuevo', [TratamientoController::class, 'create'])->name('tratamiento.create');
   Route::post('/pacientes/{patient}/tratamientos/nuevo', [TratamientoController::class, 'store'])->name('tratamiento.store');
   Route::get('/pacientes/{patient}/tratamientos/{tratamiento}', [TratamientoController::class, 'show'])->name('tratamiento.show');
+  Route::get('/pacientes/{patient}/tratamientos/{tratamiento}/finalizar', [TratamientoController::class, 'finalizarTratamiento'])->name('tratamiento.finalizar');
 
  });
 

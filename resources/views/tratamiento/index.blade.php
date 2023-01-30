@@ -49,9 +49,21 @@
                             --}}
                             <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->fecha_inicio }}</td>
                             <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->costo }}</td>
+                            <td class="py-4 px-6 border-b border-gray-200">{{ number_format($tratamiento->abonado(),2)
+                                }}</td>
+
+                            @if ($tratamiento->saldoPendiente() == 0)
+                            <td class="py-4 px-6 border-b border-gray-200">Pagado</td>
+                            @else
+                            <td class="py-4 px-6 border-b border-gray-200">{{
+                                number_format($tratamiento->saldoPendiente(),2) }}</td>
+                            @endif
+                            @if ($tratamiento->estado == 0)
+                            <td class="py-4 px-6 border-b border-gray-200">En curso</td>
+                            @else
+                            <td class="py-4 px-6 border-b border-gray-200">Finalizado</td>
+                            @endif
+
                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->abonado }}</td> --}}
 
                             <td>

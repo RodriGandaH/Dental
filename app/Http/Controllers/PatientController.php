@@ -21,10 +21,27 @@ class PatientController extends Controller
      ->orWhere('cedula', 'like', "%{$search}%")
      ->orWhere('telefono', 'like', "%{$search}%");
    })
+
    ->orderBy($sort, $order)
    ->paginate(5);
+  $deudas = array();
+  foreach ($patients as $patient) {
 
-  return view('patient.index', compact('patients', 'sort', 'order'));
+   $deuda = 0;
+
+   foreach ($patient->tratamientos as $tratamiento) {
+    $ultimo_pago = $tratamiento->pagos()->latest()->first();
+    if ($ultimo_pago) {
+     $deuda += $ultimo_pago->saldo_pendiente;
+    } else {
+     $deuda += $tratamiento->costo;
+    }
+
+   }
+   $deudas[$patient->id] = $deuda;
+  }
+
+  return view('patient.index', compact('patients', 'deudas', 'sort', 'order'));
  }
 
  public function create()
@@ -85,8 +102,10 @@ class PatientController extends Controller
 
  public function show($id)
  {
+
   // Busca el paciente en la base de datos
   $patient = Patient::find($id);
+  //deudas totales de todos los tratamientos del paciente
 
   // Si el paciente no existe, retorna un error 404
   if (!$patient) {
@@ -94,6 +113,7 @@ class PatientController extends Controller
   }
 
   // Si el paciente existe, retorna la vista para mostrar los detalles del paciente
+
   return view('patient.show', ['patient' => $patient]);
  }
 }

@@ -36,4 +36,14 @@ class Tratamiento extends Model
   return $this->hasMany(Pago::class);
  }
 
+ public function abonado()
+ {
+  return $this->pagos->sum('abono');
+ }
+
+ public function saldoPendiente()
+ {
+  return $this->costo - $this->abonado();
+ }
+
 }

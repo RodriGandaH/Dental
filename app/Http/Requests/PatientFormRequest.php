@@ -61,6 +61,7 @@ class PatientFormRequest extends FormRequest
    'sida'                        => ['required', 'string', 'max:255'],
    'sida_descp'                  => ['string', 'max:255', 'nullable'],
    'comentarios'                 => ['string', 'max:255'],
+   'deuda'                       => 'nullable',
   ];
  }
 }
