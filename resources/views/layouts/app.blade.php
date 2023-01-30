@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <style>
+        .diente {
+            fill: white;
+            stroke: black;
+            stroke-width: 1;
+            cursor: pointer;
+        }
+
+        .diente.seleccionado {
+            fill: yellow;
+        }
+    </style>
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
