@@ -15,8 +15,15 @@
             <div class="py-4 px-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
 
+                <a class="inline-flex items-center px-4 py-2  bg-gray-800 border
+                                                border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
+                                               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
+                                                duration-150" type="button"
+                    href="{{ route('tratamiento.index', ['patient' => $patient->id]) }}">Tratamientos</a>
 
-                <h2 class="text-xl font-bold">Datos personales</h2>
+
+
+                <h2 class="text-xl font-bold text-center">Datos personales</h2>
                 <br>
                 {{-- <div class="grid md:grid-cols-2 sm:grid-cols-1  gap-4"> --}}
 
@@ -81,7 +88,7 @@
                     {{--
                 </div> --}}
                 <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-800">
-                <h2 class="text-xl font-bold mt-4">Contacto de emergencia</h2>
+                <h2 class="text-xl font-bold mt-4 text-center">Contacto de emergencia</h2>
                 <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                     <div class="md:col-span-3 sm:col-span-1">
                         <p><b>Nombre completo </b> <br> {{$patient->nombre_contacto}} </p>
@@ -99,7 +106,7 @@
                     </div>
                 </div>
                 <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-800">
-                <h2 class="text-xl font-bold mt-4">Respuestas SI/NO</h2>
+                <h2 class="text-xl font-bold mt-4 text-center">Respuestas SI/NO</h2>
                 <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                     <div class="md:col-span-3 sm:col-span-1">
                         <p><b>¿Esta en tratamiento médico ?</b></p>
@@ -277,14 +284,7 @@
 
 
 
-                <div class="flex justify-end">
 
-                    <a class="inline-flex items-center px-4 py-2  bg-gray-800 border
-                                border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
-                               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
-                                duration-150" type="button"
-                        href="{{ route('tratamiento.index', ['patient' => $patient->id]) }}">Tratamientos</a>
-                </div>
             </div>
         </div>
     </div>
