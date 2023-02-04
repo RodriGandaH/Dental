@@ -18,7 +18,7 @@
             fill: yellow;
         }
     </style>
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Odontonet') }}</title>
 
     <!-- Fonts -->
     {{--
