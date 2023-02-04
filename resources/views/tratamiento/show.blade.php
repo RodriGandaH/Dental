@@ -103,13 +103,16 @@
 
 
                     <div class="flex justify-start">
+                        @if($tratamiento->pagos->sum('abono') < $tratamiento->costo)
 
-                        <a class="inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
+                            <a class="inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
                                         border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
                                         focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                         duration-150" type="button"
-                            href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
-                            Pago</a>
+                                href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
+                                Pago</a>
+                            @else
+                            @endif
                     </div>
                     <table class="text-left w-1/2 mx-auto border-collapse  mt-6 table-responsive">
                         <thead>

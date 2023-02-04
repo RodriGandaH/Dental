@@ -41,9 +41,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($tratamientos as $tratamiento)
+                        @forelse ($tratamientos as $key => $tratamiento)
                         <tr class="hover:bg-gray-200">
-                            <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->id }}</td>
+                            <td class="w-1/12 py-4 px-6 border-b border-gray-200">{{$key+1}}</td>
                             <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->tratamiento }}</td>
                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $patient->fecha_nacimiento }}</td>
                             --}}

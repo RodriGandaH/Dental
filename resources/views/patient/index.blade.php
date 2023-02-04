@@ -49,7 +49,7 @@
                                 <a
                                     href="{{ route('patient.index', ['sort' => 'direccion', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Direccion</a>
                             </th>
-                            <th>
+                            <th class=" py-4 px-6 border-b-2 border-gray-200 ">
                                 <span>Deuda</span>
                             </th>
                             <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Ver</th>
