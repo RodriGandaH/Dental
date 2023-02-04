@@ -78,7 +78,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td class="text-center pt-4" colspan="6">Este paciente no tiene tratamientos</td>
+                            <td class="text-center pt-4 m-auto" colspan="12">Este paciente no tiene tratamientos</td>
                             @endforelse
                     </tbody>
                 </table>
