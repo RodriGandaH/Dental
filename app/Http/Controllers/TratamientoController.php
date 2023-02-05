@@ -128,7 +128,7 @@ class TratamientoController extends Controller
   $tratamiento->estado    = 1;
   $tratamiento->fecha_fin = Carbon::now();
   $tratamiento->save();
-  return redirect()->route('tratamiento.show', [$patientId, $tratamientoId]);
+  return redirect()->route('tratamiento.index', [$patientId, $tratamientoId]);
  }
 
  public function destroy(Tratamiento $tratamiento)

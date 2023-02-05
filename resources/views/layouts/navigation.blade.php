@@ -84,8 +84,8 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('patient.index')"
-                :active="request()->routeIs('patient.index','patient.create','patient.show')">
+            <x-responsive-nav-link :href="route('patient.index')" :active="request()->routeIs('patient.index','patient.create','patient.show','tratamiento.index','tratamiento.create','tratamiento.show',
+                'pago.create')">
                 {{ __('Pacientes') }}
             </x-responsive-nav-link>
         </div>
