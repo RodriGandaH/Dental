@@ -87,5 +87,9 @@
             confirmButtonText: 'Aceptar'
         }) }
     });
+    //recorrer el input y cambiar la coma por punto
+    monto_abono.addEventListener('input', function() {
+        monto_abono.value = monto_abono.value.replace(',', '.');
+    });
 
 </script>

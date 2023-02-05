@@ -25,7 +25,7 @@ class PagoFormRequest extends FormRequest
  {
   return [
    'costo'           => 'nullable',
-   'abono'           => 'required',
+   'abono'           => ['required', 'numeric'],
    'saldo_pendiente' => 'nullable',
    'fecha_pago'      => 'nullable',
 

@@ -20,8 +20,8 @@
                 <form action="{{ route('patient.index') }}" method="get">
                     <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                         type="text" name="search" value="{{ request()->search }}">
-                    <button class="inline-flex items-center px-4 py-2 bg-green-500 border
-    border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-green-600
+                    <button class="inline-flex items-center px-4 py-2 bg-emerald-500 border
+    border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-emerald-600
     focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
     duration-150" type="submit">Buscar</button>
                 </form>
@@ -69,15 +69,15 @@
 
 
                             <td class="py-4 px-6 border-b border-gray-200">
-                                <a class=" inline-flex items-center px-4 py-2 bg-blue-500 border border-gray-300
+                                <a class=" inline-flex items-center px-4 py-2 bg-slate-500 border border-gray-300
                                     rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm
-                                    hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                    hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500
                                     focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
                                     type="button" href="{{ route('patient.show', ['id' => $patient->id]) }}">Ver</a>
                         </tr>
                         @empty
                         <tr>
-                            <td class="text-center pt-4" colspan="6">No hay pacientes registrados</td>
+                            <td class="text-center pt-4" colspan="12">No hay pacientes registrados</td>
                             @endforelse
                 </table>
                 <br>
