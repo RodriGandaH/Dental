@@ -106,7 +106,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -122,7 +122,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -138,7 +138,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -149,13 +149,13 @@
                                 <svg height="50" width="50" id="diente9" value="21">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
 
@@ -165,13 +165,13 @@
                                 <svg height="50" width="50" id="diente10" value="22">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -181,13 +181,13 @@
                                 <svg height="50" width="50" id="diente11" value="23">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -197,11 +197,11 @@
                                 <svg height="50" width="50" id="diente12" value="24">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -213,11 +213,11 @@
                                 <svg height="50" width="50" id="diente13" value="25">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -229,11 +229,11 @@
                                 <svg height="50" width="50" id="diente14" value="26">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -245,11 +245,11 @@
                                 <svg height="50" width="50" id="diente15" value="27">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -261,11 +261,11 @@
                                 <svg height="50" width="50" id="diente16" value="28">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -321,7 +321,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -337,7 +337,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -353,7 +353,7 @@
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -365,13 +365,13 @@
                                 <svg height="50" width="50" id="diente22" value="61">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
 
@@ -381,13 +381,13 @@
                                 <svg height="50" width="50" id="diente23" value="62">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -397,13 +397,13 @@
                                 <svg height="50" width="50" id="diente24" value="63">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -413,11 +413,11 @@
                                 <svg height="50" width="50" id="diente25" value="64">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -429,11 +429,11 @@
                                 <svg height="50" width="50" id="diente26" value="65">
                                     <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
                                     <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -452,11 +452,11 @@
                             <div class="text-center">
                                 <div class="text-center h-3">85</div>
                                 <svg height="50" width="50" id="diente27" value="85">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -468,11 +468,11 @@
                             <div>
                                 <div class="text-center h-3">84</div>
                                 <svg height="50" width="50" id="diente28" value="84">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -484,15 +484,15 @@
 
                                 <div class="text-center h-3">83</div>
                                 <svg height="50" width="50" id="diente29" value="83">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -500,15 +500,15 @@
 
                                 <div class="text-center h-3">82</div>
                                 <svg height="50" width="50" id="diente30" value="82">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -516,15 +516,15 @@
 
                                 <div class="text-center h-3">81</div>
                                 <svg height="50" width="50" id="diente31" value="81">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -534,15 +534,15 @@
                             <div class="text-center">
                                 <div class="text-center h-3">71</div>
                                 <svg height="50" width="50" id="diente32" value="71">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
 
@@ -550,15 +550,15 @@
                             <div>
                                 <div class="text-center h-3">72</div>
                                 <svg height="50" width="50" id="diente33" value="72">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -566,15 +566,15 @@
 
                                 <div class="text-center h-3">73</div>
                                 <svg height="50" width="50" id="diente34" value="73">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -582,13 +582,13 @@
 
                                 <div class="text-center h-3">74</div>
                                 <svg height="50" width="50" id="diente35" value="74">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -598,13 +598,13 @@
 
                                 <div class="text-center h-3">75</div>
                                 <svg height="50" width="50" id="diente36" value="75">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -623,11 +623,11 @@
                             <div class="text-center">
                                 <div class="text-center h-3">48</div>
                                 <svg height="50" width="50" id="diente37" value="48">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -639,11 +639,11 @@
                             <div>
                                 <div class="text-center h-3">47</div>
                                 <svg height="50" width="50" id="diente38" value="47">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -655,11 +655,11 @@
 
                                 <div class="text-center h-3">46</div>
                                 <svg height="50" width="50" id="diente39" value="46">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -671,11 +671,11 @@
 
                                 <div class="text-center h-3">45</div>
                                 <svg height="50" width="50" id="diente40" value="45">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -687,11 +687,11 @@
 
                                 <div class="text-center h-3">44</div>
                                 <svg height="50" width="50" id="diente41" value="44">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
@@ -703,15 +703,15 @@
 
                                 <div class="text-center h-3">43</div>
                                 <svg height="50" width="50" id="diente42" value="43">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -719,15 +719,15 @@
 
                                 <div class="text-center h-3">42</div>
                                 <svg height="50" width="50" id="diente43" value="42">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -735,15 +735,15 @@
 
                                 <div class="text-center h-3">41</div>
                                 <svg height="50" width="50" id="diente44" value="41">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
                                     <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
                                     <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -752,15 +752,15 @@
                             <div class="text-center">
                                 <div class="text-center h-3">31</div>
                                 <svg height="50" width="50" id="diente45" value="31">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
 
@@ -768,15 +768,15 @@
                             <div>
                                 <div class="text-center h-3">32</div>
                                 <svg height="50" width="50" id="diente46" value="32">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -784,15 +784,15 @@
 
                                 <div class="text-center h-3">33</div>
                                 <svg height="50" width="50" id="diente47" value="33">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
-                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
+                                    <polygon points="20,20 40,20 40,40 20,40" estado="0" value="incisal"
                                         class="diente" />
                                 </svg>
                             </div>
@@ -800,13 +800,13 @@
 
                                 <div class="text-center h-3">34</div>
                                 <svg height="50" width="50" id="diente48" value="34">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -816,13 +816,13 @@
 
                                 <div class="text-center h-3">35</div>
                                 <svg height="50" width="50" id="diente49" value="35">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -832,13 +832,13 @@
 
                                 <div class="text-center h-3">36</div>
                                 <svg height="50" width="50" id="diente50" value="36">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -848,13 +848,13 @@
 
                                 <div class="text-center h-3">37</div>
                                 <svg height="50" width="50" id="diente51" value="37">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />
@@ -864,13 +864,13 @@
 
                                 <div class="text-center h-3">38</div>
                                 <svg height="50" width="50" id="diente52" value="38">
-                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="vestibular"
+                                    <polygon points="10,10 50,10 40,20 20,20" estado="0" value="lingual"
                                         class="diente" />
-                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="mesial"
+                                    <polygon points="50,10 50,50 40,40 40,20" estado="0" value="distal"
                                         class="diente" />
-                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="palatino"
+                                    <polygon points="50,50 10,50 20,40 40,40" estado="0" value="vestibular"
                                         class="diente" />
-                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="distal"
+                                    <polygon points="10,50 20,40 20,20 10,10" estado="0" value="mesial"
                                         class="diente" />
                                     <polygon points="20,20 40,20 40,40 20,40" estado="0" value="oclusal"
                                         class="diente" />

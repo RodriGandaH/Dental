@@ -59,7 +59,9 @@
                                 number_format($tratamiento->saldoPendiente(),2) }}</td>
                             @endif
                             @if ($tratamiento->estado == 0)
-                            <td class="py-4 px-6 border-b border-gray-200">En curso</td>
+                            <td class="py-4 px-6 border-b border-gray-200"> <span class="bg-orange-400">En
+                                    curso</span>
+                            </td>
                             @else
                             <td class="py-4 px-6 border-b border-gray-200">Finalizado</td>
                             @endif
