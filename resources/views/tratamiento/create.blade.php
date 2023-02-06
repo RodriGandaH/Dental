@@ -990,34 +990,39 @@
 </script>
 <script>
     const dientes = document.querySelectorAll('.diente');
-const inputValores = document.querySelector('#diente');
-let partesSeleccionadas = {};
+    const inputValores = document.querySelector('#diente');
+    let partesSeleccionadas = {};
+    let dientesSeleccionados = [];
 
-dientes.forEach(diente => {
-  diente.addEventListener('click', function() {
-    this.classList.toggle('seleccionado');
-    const input = document.getElementById('diente');
-    let svgId = this.closest("svg").id;
-    let svgValue = document.getElementById(svgId).getAttribute("value");
-    let parte = this.getAttribute('value');
+    dientes.forEach(diente => {
+        diente.addEventListener('click', function() {
+            this.classList.toggle('seleccionado');
+            let svgId = this.closest("svg").id;
+            let svgValue = document.getElementById(svgId).getAttribute("value");
+            let parte = this.getAttribute('value');
 
-    if (this.classList.contains('seleccionado')) {
-      if (!partesSeleccionadas[svgValue]) {
-        partesSeleccionadas[svgValue] = [];
-      }
-      partesSeleccionadas[svgValue].push(parte);
-    } else {
-      partesSeleccionadas[svgValue] = partesSeleccionadas[svgValue].filter(p => p !== parte);
-    }
+            if (this.classList.contains('seleccionado')) {
+                if (!partesSeleccionadas[svgValue]) {
+                    partesSeleccionadas[svgValue] = [];
+                    }
+                partesSeleccionadas[svgValue].push(parte);
+                if (!dientesSeleccionados.includes(svgValue)) {
+                    dientesSeleccionados.push(svgValue);
+                    }
+                 } else {
+                    partesSeleccionadas[svgValue] = partesSeleccionadas[svgValue].filter(p => p !== parte);
+                        if (!partesSeleccionadas[svgValue].length) {
+                            delete partesSeleccionadas[svgValue];
+                            dientesSeleccionados = dientesSeleccionados.filter(d => d !== svgValue);
+                        }
+                    }
 
     let valores = '';
-    for (let diente in partesSeleccionadas) {
-      if (partesSeleccionadas[diente].length) {
-        valores += `${diente}:${partesSeleccionadas[diente].join(',')},`;
-      }
-    }
-    input.value = valores;
-  });
+    dientesSeleccionados.forEach(diente => {
+        valores += `${diente}:${partesSeleccionadas[diente].join(',')},\n`;
+    });
+    inputValores.value = valores;
+});
 });
 
 </script>
