@@ -86,10 +86,20 @@
             icon: 'error',
             confirmButtonText: 'Aceptar'
         }) }
+        if(monto_abono.value<0){
+            event.preventDefault();
+            Swal.fire ({
+            title: 'Error',
+            text: 'El monto del abono no puede ser menor a 0 Bs.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        })
+         }
     });
     //recorrer el input y cambiar la coma por punto
     monto_abono.addEventListener('input', function() {
         monto_abono.value = monto_abono.value.replace(',', '.');
+       
     });
 
 </script>
