@@ -9,7 +9,7 @@
             <x-success-status class="mb-4" :status="session('message')" />
             <div class="py-4 px-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <form action="" method="POST">
-                    <h2 class="text-xl font-bold">Datos personales del paciente</h2>
+                    <h2 class="text-xl font-semibold text-gray-900">Datos personales del paciente</h2>
                     <br>
                     {{-- <div class="grid md:grid-cols-2 sm:grid-cols-1  gap-4"> --}}
                         @csrf
@@ -101,7 +101,9 @@
                         </div>
                         {{--
                     </div> --}}
-                    <h2 class="text-xl font-bold mt-4">Persona a la que comunicarse en caso de emergencia</h2>
+                    <hr class="h-px my-3 bg-gray-400 border-1 dark:bg-gray-800">
+                    <h2 class="text-xl font-semibold text-gray-900 mt-4">Persona a la que comunicarse en caso de
+                        emergencia</h2>
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                         <div class="md:col-span-4 sm:col-span-1">
                             <x-input-label for="nombre_contacto" :value="__('Nombre Completo')" />
@@ -125,7 +127,8 @@
                                 type="text" name="nombre_telefono_doctor" :value="old('nombre_telefono_doctor')" />
                         </div>
                     </div>
-                    <h2 class="text-xl font-bold mt-4">Responder SI o NO</h2>
+                    <hr class="h-px my-3 bg-gray-400 border-1 dark:bg-gray-800">
+                    <h2 class="text-xl font-semibold text-gray-900 mt-4">Responder SI o NO</h2>
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                         <div class="md:col-span-4 sm:col-span-1">
                             <x-input-label for="tratamiento_medico" :value="__('¿ Esta en tratamiento médico ?')" />
@@ -357,6 +360,7 @@
                             @enderror
                         </div>
                     </div>
+                    <hr class="h-px my-3 bg-gray-400 border-1 dark:bg-gray-800">
                     <label for="comentarios"
                         class="block mb-2 text-sm font-medium mt-3 text-gray-900 ">Comentarios</label>
                     <textarea id="comentarios" rows="4" name="comentarios"

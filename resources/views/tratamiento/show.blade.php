@@ -19,62 +19,66 @@
 
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                         <div class="md:col-span-3 sm:col-span-1">
-                            <p><b>Dientes </b> <br> {{$tratamiento->diente}} </p>
+                            <span class="text-sm text-gray-900 font-semibold">Dientes</span> <br> <span
+                                class="text-sm text-gray-900">{{$tratamiento->diente}}</span>
                         </div>
                         <div class="md:col-span-3 sm:col-span-1">
-                            <p><b>Diagnostico </b> <br> {{$tratamiento->diagnostico}} </p>
+                            <span class="text-sm text-gray-900 font-semibold">Diagnostico </span> <br> <span
+                                class="text-sm text-gray-900">{{$tratamiento->diagnostico}}</span>
                         </div>
                         <div class="md:col-span-1 sm:col-span-1">
-                            <p><b>Rayos X</b> <br>
-                                @if ($tratamiento->rayos_x == 1)
-                            <p>Si</p>
+                            <span class="text-sm text-gray-900 font-semibold">Rayos X</span> <br>
+                            @if ($tratamiento->rayos_x == 1)
+                            <span class="text-sm text-gray-900 ">Si</span>
                             @else
-                            <p>No</p>
+                            <span class="text-sm text-gray-900 ">No</span>
                             @endif
-                            </p>
+
                         </div>
                         <div class="md:col-span-3 sm:col-span-1">
-                            <p><b>Tratamiento </b> <br>
-                                {{ $tratamiento->tratamiento }}
-                            </p>
+                            <span class="text-sm text-gray-900 font-semibold">Tratamiento </span> <br>
+
+                            <span class="text-sm text-gray-900 ">{{ $tratamiento->tratamiento }}</span>
+
                         </div>
                         <div class="md:col-span-1 sm:col-span-1">
-                            <p><b>Costo </b> <br> <span class="bg-green-400">{{$tratamiento->costo}}</span> </p>
+                            <span class="text-sm text-gray-900 font-semibold">Costo </span> <br> <span
+                                class="text-sm bg-green-400">{{$tratamiento->costo}}</span>
                         </div>
                         <div class="md:col-span-1 sm:col-span-1">
-                            <p><b>Fecha de inicio </b> <br> {{date('d/m/Y',
-                                strtotime($tratamiento->fecha_inicio))}} </p>
+                            <span class="text-sm text-gray-900 font-semibold">Fecha de inicio </span> <br>
+                            <span class="text-sm text-gray-900 "> {{date('d/m/Y',
+                                strtotime($tratamiento->fecha_inicio))}}</span>
 
                         </div>
 
                     </div>
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                         <div class="md:col-span-3 sm:col-span-1">
-                            <p><b>Fecha de finalizacion</b> <br></p>
+                            <span class="text-sm text-gray-900 font-semibold">Fecha de finalizacion</span> <br>
                             @if ($tratamiento->fecha_fin == null)
-                            <p>Aun no se finalizó</p>
+                            <span class="text-sm text-gray-900 ">Aun no se finalizó</span>
                             @else
-                            <p>{{date('d/m/Y',
-                                strtotime($tratamiento->fecha_fin))}}</p>
+                            <span class="text-sm text-gray-900 "> {{date('d/m/Y',
+                                strtotime($tratamiento->fecha_fin))}}</span>
                             @endif
                         </div>
                         <div class="md:col-span-3 sm:col-span-1">
-                            <p><b>Observaciones</b> <br></p>
+                            <span class="text-sm text-gray-900 font-semibold">Observaciones</span> <br>
                             @if ($tratamiento->observaciones != null)
-                            <p>{{$tratamiento->observaciones}}</p>
+                            <span class="text-sm text-gray-900 ">{{$tratamiento->observaciones}}</span>
 
                             @else
-                            <p>No se tienen observaciones</p>
+                            <span class="text-sm text-gray-900 ">No se tienen observaciones</span>
                             @endif
                         </div>
                         <div class="md:col-span-2 sm:col-span-1">
-                            <p>
-                                <b>Estado</b> <br>
-                            </p>
+                            <span class="text-sm text-gray-900 font-semibold">Estado</span> <br>
+
                             @if ($tratamiento->estado == 0)
-                            <p>En curso</p>
+                            <span class="text-sm text-gray-900 ">En curso</span>
                             @else
-                            <p>Finalizado</p>
+                            <span class="text-sm text-gray-900 ">Finalizado</span>
                             @endif
 
                         </div>
@@ -82,7 +86,7 @@
 
                             @if($tratamiento->estado == 0)
 
-                            <a class="inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
+                            <a class=" inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
                                                                 border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
                                                                 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                                 duration-150" type="button"
@@ -96,10 +100,10 @@
 
                     </div>
 
-                    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-800">
+                    <hr class="h-px my-3 bg-gray-400">
 
 
-                    <h2 class="font-bold text-xl text-center">Pagos realizados</h2>
+                    <h2 class="font-medium text-xl text-center">Pagos realizados</h2>
 
 
                     <div class="flex justify-start">
@@ -114,73 +118,95 @@
                             @else
                             @endif
                     </div>
-                    <table class="text-left w-1/2 mx-auto border-collapse  mt-6 table-responsive">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="w-1/12 py-4 px-6 border-b-2 border-gray-200 ">
-                                    <a>Nro</a>
-                                </th>
-                                <th class="py-4 px-6 border-b-2 border-gray-200"><a>Abonado</a>
-                                </th>
-                                <th class="py-4 px-6 border-b-2 border-gray-200"><a>Restante</a>
+                    <div class="flex flex-col">
+                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                                <div class="overflow-hidden">
 
-                                <th class="py-4 px-6 border-b-2 border-gray-200 tex-left">Fecha</th>
+                                    <table class="min-w-full">
+                                        <thead class="bg-gray-800 border-b">
+                                            <tr>
+                                                <th scope="col"
+                                                    class="text-sm font-medium text-white px-6 py-4 text-left">
+                                                    <a>Nro</a>
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-sm font-medium text-white px-6 py-4 text-left">Abonado
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-sm font-medium text-white px-6 py-4 text-left">Restante
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse ($pagos as $key => $pago)
-                            <tr class="hover:bg-gray-200">
-                                <td class="w-1/12 py-4 px-6 border-b border-gray-200">{{$key+1}}</td>
-                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->abono }}</td>
-                                <td class="py-4 px-6 border-b border-gray-200">{{ $pago->saldo_pendiente }}</td>
-                                <td class="py-4 px-6 border-b border-gray-200">{{date('d/m/Y',
-                                    strtotime($pago->fecha_pago)) }}</td>
-                            </tr>
-                            <tr>
+                                                <th scope="col"
+                                                    class="text-sm font-medium text-white px-6 py-4 text-left">Fecha
+                                                </th>
 
-                            </tr>
-                            @empty
-                            <tr>
-                                <td class="text-center pt-4" colspan="6">Este paciente aun no realizo pagos</td>
-                            </tr>
-                            @endforelse
-                            @if(count($pagos) > 0)
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($pagos as $key => $pago)
+                                            <tr
+                                                class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                                    {{$key+1}}</td>
+                                                <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                                    $pago->abono }}</td>
+                                                <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                                    $pago->saldo_pendiente
+                                                    }}</td>
+                                                <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">
+                                                    {{date('d/m/Y',
+                                                    strtotime($pago->fecha_pago)) }}</td>
+                                            </tr>
+                                            <tr>
 
-
-
-                            @if($pagos->sum('abono') == $tratamiento->costo)
-
-                            <tr class="bg-green-400">
-                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl"> <b>Total</b>
-                                </td>
-                                <td class="py-4 px-6 border-b border-gray-200 text-bold "> <b>{{
-                                        $pagos->sum('abono')
-                                        }}</b></td>
-                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="2">
-                                    <b>El tratamiento esta pagado</b>
-                                </td>
-                            </tr>
-                            @else
-                            <tr class="bg-orange-300">
-                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl"> <b>Total</b>
-                                </td>
-                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="3"> <b>{{
-                                        $pagos->sum('abono')
-                                        }}</b></td>
-                            </tr>
-
-                            @endif
-
-                            @endif
-                        </tbody>
-                    </table>
-
-                    <br>
+                                            </tr>
+                                            @empty
+                                            <tr>
+                                                <td class="text-center pt-4" colspan="6">Este paciente aun no realizo
+                                                    pagos</td>
+                                            </tr>
+                                            @endforelse
+                                            @if(count($pagos) > 0)
 
 
 
-                </div>
-            </div>
-        </div>
+                                            @if($pagos->sum('abono') == $tratamiento->costo)
+
+                                            <tr class="bg-green-400">
+                                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl">
+                                                    <b>Total</b>
+                                                </td>
+                                                <td class="py-4 px-6 border-b border-gray-200 text-bold "> <b>{{
+                                                        $pagos->sum('abono')
+                                                        }}</b></td>
+                                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="2">
+                                                    <b>El tratamiento esta pagado</b>
+                                                </td>
+                                            </tr>
+                                            @else
+                                            <tr class="bg-orange-300">
+                                                <td class="w-1/12 py-4 px-6 border-b border-gray-200 text-bold text-xl">
+                                                    <b>Total</b>
+                                                </td>
+                                                <td class="py-4 px-6 border-b border-gray-200 text-bold " colspan="3">
+                                                    <b>{{
+                                                        $pagos->sum('abono')
+                                                        }}</b>
+                                                </td>
+                                            </tr>
+
+                                            @endif
+
+                                            @endif
+                                        </tbody>
+                                    </table>
+
+                                    <br>
+
+
+
+                                </div>
+                            </div>
+                        </div>
 </x-app-layout>

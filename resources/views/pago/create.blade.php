@@ -8,26 +8,26 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="py-4 px-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <h2 class="font-bold text-2xl">Nuevo pago</h2>
+                <h2 class="text-xl text-gray-900 font-semibold">Nuevo pago</h2>
                 <br>
                 <form id="pago" method="POST">
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                         <div class="md:col-span-4 sm:col-span-1">
-                            <p><b>Costo Total</b> <br></p>
-                            <p>{{$tratamiento->costo}} Bs.</p>
+                            <span class=" text-gray-900 font-semibold">Costo Total</span> <br>
+                            <span class=" text-gray-900">{{$tratamiento->costo}} Bs.</span>
                         </div>
                         <div class="md:col-span-4 sm:col-span-1">
 
 
-                            <p><b>Pagado</b> <br></p>
+                            <span class=" text-gray-900 font-semibold">Pagado</span> <br>
 
-                            <p>{{number_format($cantidad_pagada,2)}} Bs.</p>
+                            <span class=" text-gray-900">{{number_format($cantidad_pagada,2)}} Bs.</span>
 
                         </div>
                         <div class="md:col-span-4 sm:col-span-1">
 
-                            <p><b>Saldo pendiente</b> <br></p>
-                            <p>{{number_format($saldo_pendiente,2)}} Bs.</p>
+                            <span class=" text-gray-900 font-semibold">Saldo pendiente</span> <br>
+                            <span class=" text-gray-900">{{number_format($saldo_pendiente,2)}} Bs.</span>
 
 
                         </div>
@@ -39,31 +39,32 @@
                     @csrf
                     <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2">
                         <div class="md:col-span-4 sm:col-span-1">
-                            <b>
+                            <span class=" text-gray-900 font-semibold">
                                 Abono
-                            </b>
+                            </span>
                             <x-text-input id="abono" class="block mt-1 w-full" type="text" name="abono"
                                 :value="old('abono')" />
                             @error('abono')
-                            <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
+                            <span class=" text-red-600 space-y-1">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
 
+
                     <div class="flex justify-between">
-                        <button type="submit"
-                            class="mt-3 ml-3 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                            Guardar
-                        </button>
+                        <x-primary-button class="mt-3 ml-3">
+                            {{ __('Guardar') }}
+                        </x-primary-button>
                         <a class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
-        border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
-        focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
-        duration-150 mr-3' type=" button"
+                                                        border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
+                                                        focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
+                                                        duration-150 mr-3' type=" button"
                             href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}"
                             style="
-    height: 34px;">
+                                                    height: 34px;">
                             Cancelar</a>
                     </div>
+
                 </form>
             </div>
 
@@ -99,7 +100,7 @@
     //recorrer el input y cambiar la coma por punto
     monto_abono.addEventListener('input', function() {
         monto_abono.value = monto_abono.value.replace(',', '.');
-       
+
     });
 
 </script>

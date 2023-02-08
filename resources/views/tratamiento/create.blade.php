@@ -8,7 +8,7 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="py-4 px-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <h2 class="text-center text-xl font-bold">Odontograma</h2>
+                <h2 class="text-center text-gray-900 font-semibold text-xl">Odontograma</h2>
 
                 <div class="container">
                     <!-- primera fila -->
@@ -885,7 +885,7 @@
 
 
                     <form method="POST" class="m-3">
-                        <h2 class="text-xl font-bold text-center">Datos</h2>
+                        <h2 class="text-xl font-semibold text-gray-900 text-center">Datos</h2>
                         <br>
                         {{-- <div class="grid md:grid-cols-2 sm:grid-cols-1  gap-4"> --}}
                             @csrf
@@ -950,6 +950,7 @@
 
                                 </div> --}}
 
+
                                 <div class="md:col-span-6 sm:col-span-1">
 
                                     <x-input-label for="observaciones" :value="__('Observaciones')" />
@@ -967,19 +968,17 @@
                             </div>
                             <br>
 
-                            <div
-                                class="flex flex-col text-center sm:justify-between sm:flex-row sm:text-center sm:items-center">
-                                <a type="button"
-                                    class="px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
-                                    style="
-    height: 34px;">
+
+                            <div class="flex justify-between">
+                                <x-primary-button class="mt-3 ml-3">
                                     {{ __('Guardar') }}
-                                </a>
-                                <a class='px-4 mt-3 py-2 bg-red-600 border
-        border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
-        focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
-        duration-150 mr-3' type=" button" href="{{ route('tratamiento.index', ['patient' => $patient->id]) }}" style="
-    height: 34px;">
+                                </x-primary-button>
+                                <a class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
+                                    border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
+                                    focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
+                                    duration-150 mr-3' type=" button"
+                                    href="{{ route('tratamiento.index', ['patient' => $patient->id]) }}" style="
+                                height: 34px;">
                                     Cancelar</a>
                             </div>
                     </form>
