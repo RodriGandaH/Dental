@@ -60,7 +60,7 @@ class PatientFormRequest extends FormRequest
    'cicatrizar_heridas_descp'    => ['string', 'max:255', 'nullable'],
    'sida'                        => ['required', 'string', 'max:255'],
    'sida_descp'                  => ['string', 'max:255', 'nullable'],
-   'comentarios'                 => ['string', 'max:255'],
+   'comentarios'                 => ['string', 'max:255', 'nullable'],
    'deuda'                       => 'nullable',
   ];
  }

@@ -53,7 +53,7 @@ return new class extends Migration
    $table->string('cicatrizar_heridas_descp')->nullable();;
    $table->string('sida');
    $table->string('sida_descp')->nullable();;
-   $table->string('comentarios');
+   $table->string('comentarios')->nullable();
    $table->double('deuda')->default(0);
    $table->timestamps();
 

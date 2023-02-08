@@ -49,7 +49,7 @@
                             <div class="md:col-span-2 sm:col-span-1">
                                 <x-input-label for="sexo" :value="__('Sexo')" />
                                 <select id="sexo" name="sexo"
-                                    class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                                     <option value="seleccionar" selected>Selecciona el sexo</option>
                                     <option value="M">Masculino</option>
                                     <option value="F">Femenino</option>
@@ -71,7 +71,7 @@
                             <div class="md:col-span-2 sm:col-span-1">
                                 <x-input-label for="estado_civil" :value="__('Estado civil')" />
                                 <select id="estado_civil" name="estado_civil"
-                                    class="my-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    class="my-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option value="estado" selected>Selecciona el estado civil</option>
                                     <option value="S">Soltero(a)</option>
                                     <option value="C">Casado(a)</option>
@@ -358,9 +358,9 @@
                         </div>
                     </div>
                     <label for="comentarios"
-                        class="block mb-2 text-sm font-medium mt-3 text-gray-900 dark:text-white">Comentarios</label>
+                        class="block mb-2 text-sm font-medium mt-3 text-gray-900 ">Comentarios</label>
                     <textarea id="comentarios" rows="4" name="comentarios"
-                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Escribe los message aqui..."></textarea>
                     <div class="flex justify-between">
                         <x-primary-button class="mt-3 ml-3">
@@ -415,13 +415,13 @@
     tratamiento_medico_descp.style.display = 'none';
 
     alergias_descp.style.display = 'none';
-   
+
     medicamentos_que_toma_descp.style.display = 'none';
-   
+
     antibioticos_descp.style.display = 'none';
-   
+
     enfermo_del_corazon_descp.style.display = 'none';
-   
+
     hepatitis_descp.style.display = 'none';
 
     diabetes_descp.style.display = 'none';
@@ -437,7 +437,7 @@
     sida_descp.style.display = 'none';
 
     //Añadir un evento de click a cada radio button
-    
+
     tratamiento_medico_radio.forEach(button => {
       button.addEventListener('click', () => {
         if (button.value === '1') {
