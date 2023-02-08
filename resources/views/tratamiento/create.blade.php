@@ -12,9 +12,10 @@
 
                 <div class="container">
                     <!-- primera fila -->
-                    <div class="md:flex md:flex-row md:justify-center" id="odontograma-fila-1">
+                    <div class="lg:flex lg:flex-row lg:justify-center flex flex-col items-center"
+                        id="odontograma-fila-1">
 
-                        <div class="flex flex-row mx-6">
+                        <div class="lg:flex lg::flex-row lg:mx-6 flex flex-row ">
                             <div class="text-center">
                                 <div class="text-center h-3">18</div>
                                 <svg height="50" width="50" id="diente1" value="18">
@@ -275,9 +276,10 @@
                     </div>
                     <!-- segunda fila -->
 
-                    <div class="md:flex md:flex-row justify-center" id="odontograma-fila-2">
+                    <div class="lg:flex lg:flex-row lg:justify-center flex flex-col items-center"
+                        id="odontograma-fila-2">
 
-                        <div class="flex flex-row mx-6">
+                        <div class="lg:flex lg::flex-row lg:mx-6 flex flex-row ">
                             <div class="text-center">
                                 <div class="text-center h-3">55</div>
                                 <svg height="50" width="50" id="diente17" value="55">
@@ -446,9 +448,10 @@
                     </div>
                     <!-- tercera fila -->
 
-                    <div class="md:flex md:flex-row justify-center">
+                    <div class="lg:flex lg:flex-row lg:justify-center flex flex-col items-center"
+                        id="odontograma-fila-3">
 
-                        <div class="flex flex-row mx-6">
+                        <div class="lg:flex lg::flex-row lg:mx-6 flex flex-row ">
                             <div class="text-center">
                                 <div class="text-center h-3">85</div>
                                 <svg height="50" width="50" id="diente27" value="85">
@@ -617,9 +620,10 @@
                     </div>
 
                     <!-- cuarta fila -->
-                    <div class="md:flex md:flex-row md:justify-center">
+                    <div class="lg:flex lg:flex-row lg:justify-center flex flex-col items-center"
+                        id="odontograma-fila-4">
 
-                        <div class="flex flex-row mx-6">
+                        <div class="lg:flex lg::flex-row lg:mx-6 flex flex-row ">
                             <div class="text-center">
                                 <div class="text-center h-3">48</div>
                                 <svg height="50" width="50" id="diente37" value="48">
@@ -961,12 +965,17 @@
                                 </div> --}}
 
                             </div>
+                            <br>
 
-                            <div class="flex justify-between">
-                                <x-primary-button class="mt-3 ml-3">
-                                    {{ __('Guardar Tratamiento') }}
-                                </x-primary-button>
-                                <a class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
+                            <div
+                                class="flex flex-col text-center sm:justify-between sm:flex-row sm:text-center sm:items-center">
+                                <a type="button"
+                                    class="px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                                    style="
+    height: 34px;">
+                                    {{ __('Guardar') }}
+                                </a>
+                                <a class='px-4 mt-3 py-2 bg-red-600 border
         border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
         focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
         duration-150 mr-3' type=" button" href="{{ route('tratamiento.index', ['patient' => $patient->id]) }}" style="
