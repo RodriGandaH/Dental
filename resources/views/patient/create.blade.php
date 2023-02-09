@@ -417,371 +417,334 @@
 
 <script>
     window.onload = function(){
-   /*  //Obtener los elementos del DOM
+        //Obtener los elementos del DOM
 
+        //tratamientos medicos
+        const tratamiento_medico_descp = document.querySelector('#tratamiento_medico_descp');
+        const tratamiento_medico_radio = document.querySelectorAll('input[name="tratamiento_medico"]');
+        tratamiento_medico_descp.style.display = 'none';
+        let tratamiendo_medico_value ='';
 
-    const sida_radio = document.querySelectorAll('input[name="sida"]');
+        if(tratamiento_medico_radio[0].checked){
+        tratamiento_medico_descp.style.display = 'block';
+        tratamiendo_medico_value = tratamiento_medico_descp.value;
+        } else if (tratamiento_medico_radio[1].checked){
+        tratamiento_medico_descp.style.display = 'none';
+        tratamiendo_medico_value = tratamiento_medico_descp.value;
+        tratamiento_medico_descp.value = '';
+        }
 
+        tratamiento_medico_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        tratamiento_medico_descp.style.display = 'block';
+        tratamiento_medico_descp.value=tratamiendo_medico_value;
+        } else {
+        tratamiento_medico_descp.style.display = 'none';
+        tratamiendo_medico_value = tratamiento_medico_descp.value;
+        tratamiento_medico_descp.value = '';
+        }
+        });
+        });
 
+        // alergias
+        const alergias_radio = document.querySelectorAll('input[name="alergias"]');
+        const alergias_descp = document.querySelector('#alergias_descp');
+        let alergia_value = '';
+        alergias_descp.style.display = 'none';
 
-    const sida_descp = document.querySelector('#sida_descp');
+        if(alergias_radio[0].checked){
+        alergias_descp.style.display = 'block';
 
-    //mantener datos si hay error
-    const hasError = document.querySelector('.text-red-600');
+        alergia_value = alergias_descp.value;
+        } else if (alergias_radio[1].checked){
+        alergias_descp.style.display = 'none';
+        alergias_descp.value = '';
+        }
 
-    //Ocultar y deshabilitar el input de texto al cargar la página
+        alergias_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        alergias_descp.style.display = 'block';
+        alergias_descp.value = alergia_value;
+        } else {
+        alergias_descp.style.display = 'none';
+        alergia_value = alergias_descp.value;
+        alergias_descp.value = '';
+        }
+        });
+        });
 
+        // medicamentos
+        const medicamentos_que_toma_radio = document.querySelectorAll('input[name="medicamentos_que_toma"]');
+        const medicamentos_que_toma_descp = document.querySelector('#medicamentos_que_toma_descp');
+        let medicamentos_value = '';
+        medicamentos_que_toma_descp.style.display = 'none';
 
+        if(medicamentos_que_toma_radio[0].checked){
+        medicamentos_que_toma_descp.style.display = 'block';
+        medicamentos_value = medicamentos_que_toma_descp.value;
+        } else if (medicamentos_que_toma_radio[1].checked){
+        medicamentos_que_toma_descp.style.display = 'none';
+        medicamentos_que_toma_descp.value = '';
+        }
 
+        medicamentos_que_toma_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        medicamentos_que_toma_descp.style.display = 'block';
+        medicamentos_que_toma_descp.value = medicamentos_value;
+        } else {
+        medicamentos_que_toma_descp.style.display = 'none';
+        medicamentos_value = medicamentos_que_toma_descp.value;
+        medicamentos_que_toma_descp.value = '';
+        }
+        });
+        });
 
-    medicamentos_que_toma_descp.style.display = 'none';
+        // antibioticos
+        const antibioticos_radio = document.querySelectorAll('input[name="antibioticos"]');
+        const antibioticos_descp = document.querySelector('#antibioticos_descp');
+        let antibioticos_value = '';
+        antibioticos_descp.style.display = 'none';
 
-    antibioticos_descp.style.display = 'none';
+        if(antibioticos_radio[0].checked){
+        antibioticos_descp.style.display = 'block';
+        antibioticos_value = antibioticos_descp.value;
+        } else if (antibioticos_radio[1].checked){
+        antibioticos_descp.style.display = 'none';
+        antibioticos_descp.value = '';
+        }
 
-    enfermo_del_corazon_descp.style.display = 'none';
+        antibioticos_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        antibioticos_descp.style.display = 'block';
+        antibioticos_descp.value = antibioticos_value;
+        } else {
+        antibioticos_descp.style.display = 'none';
+        antibioticos_value = antibioticos_descp.value;
+        antibioticos_descp.value = '';
+        }
+        });
+        });
 
-    hepatitis_descp.style.display = 'none';
+        // Enfermo del corazón
+        const enfermo_del_corazon_radio = document.querySelectorAll('input[name="enfermo_del_corazon"]');
+        const enfermo_del_corazon_descp = document.querySelector('#enfermo_del_corazon_descp');
+        let enfermo_del_corazon_value = '';
+        enfermo_del_corazon_descp.style.display = 'none';
 
-    diabetes_descp.style.display = 'none';
+        if (enfermo_del_corazon_radio[0].checked) {
+        enfermo_del_corazon_descp.style.display = 'block';
+        enfermo_del_corazon_value = enfermo_del_corazon_descp.value;
+        } else if (enfermo_del_corazon_radio[1].checked) {
+        enfermo_del_corazon_descp.style.display = 'none';
+        enfermo_del_corazon_descp.value = '';
+        }
 
-    sifilis_descp.style.display = 'none';
+        enfermo_del_corazon_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        enfermo_del_corazon_descp.style.display = 'block';
+        enfermo_del_corazon_descp.value = enfermo_del_corazon_value;
+        } else {
+        enfermo_del_corazon_descp.style.display = 'none';
+        enfermo_del_corazon_value = enfermo_del_corazon_descp.value;
+        enfermo_del_corazon_descp.value = '';
+        }
+        });
+        });
 
-    desmayos_descp.style.display = 'none';
+        //hepatitis
+        const hepatitis_radio = document.querySelectorAll('input[name="hepatitis"]');
+        const hepatitis_descp = document.querySelector('#hepatitis_descp');
+        let hepatitis_value = '';
+        hepatitis_descp.style.display = 'none';
 
-    sangra_mucho_descp.style.display = 'none';
+        if (hepatitis_radio[0].checked) {
+        hepatitis_descp.style.display = 'block';
+        hepatitis_value = hepatitis_descp.value;
+        } else if (hepatitis_radio[1].checked) {
+        hepatitis_descp.style.display = 'none';
+        hepatitis_descp.value = '';
+        }
 
-    cicatrizar_heridas_descp.style.display = 'none';
+        hepatitis_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        hepatitis_descp.style.display = 'block';
+        hepatitis_descp.value = hepatitis_value;
+        } else {
+        hepatitis_descp.style.display = 'none';
+        hepatitis_value = hepatitis_descp.value;
+        hepatitis_descp.value = '';
+        }
+        });
+        });
 
-    sida_descp.style.display = 'none';
+        //diabetes
+        const diabetes_radio = document.querySelectorAll('input[name="diabetes"]');
+        const diabetes_descp = document.querySelector('#diabetes_descp');
+        let diabetes_value = '';
+        diabetes_descp.style.display = 'none';
 
-   */
+        if (diabetes_radio[0].checked) {
+        diabetes_descp.style.display = 'block';
+        diabetes_value = diabetes_descp.value;
+        } else if (diabetes_radio[1].checked) {
+        diabetes_descp.style.display = 'none';
+        diabetes_descp.value = '';
+        }
 
-//tratamientos medicos
-const tratamiento_medico_descp = document.querySelector('#tratamiento_medico_descp');
-const tratamiento_medico_radio = document.querySelectorAll('input[name="tratamiento_medico"]');
-tratamiento_medico_descp.style.display = 'none';
-let tratamiendo_medico_value ='';
+        diabetes_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        diabetes_descp.style.display = 'block';
+        diabetes_descp.value = diabetes_value;
+        } else {
+        diabetes_descp.style.display = 'none';
+        diabetes_value = diabetes_descp.value;
+        diabetes_descp.value = '';
+        }
+        });
+        });
 
-if(tratamiento_medico_radio[0].checked){
-tratamiento_medico_descp.style.display = 'block';
-tratamiendo_medico_value = tratamiento_medico_descp.value;
-} else if (tratamiento_medico_radio[1].checked){
-tratamiento_medico_descp.style.display = 'none';
-tratamiendo_medico_value = tratamiento_medico_descp.value;
-tratamiento_medico_descp.value = '';
-}
+        // sifilis
+        const sifilis_radio = document.querySelectorAll('input[name="sifilis"]');
+        const sifilis_descp = document.querySelector('#sifilis_descp');
+        let sifilis_value = '';
+        sifilis_descp.style.display = 'none';
 
-tratamiento_medico_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-tratamiento_medico_descp.style.display = 'block';
-tratamiento_medico_descp.value=tratamiendo_medico_value;
-} else {
-tratamiento_medico_descp.style.display = 'none';
-tratamiendo_medico_value = tratamiento_medico_descp.value;
-tratamiento_medico_descp.value = '';
-}
-});
-});
+        if(sifilis_radio[0].checked){
+        sifilis_descp.style.display = 'block';
+        sifilis_value = sifilis_descp.value;
+        } else if (sifilis_radio[1].checked){
+        sifilis_descp.style.display = 'none';
+        sifilis_descp.value = '';
+        }
 
-// alergias
-const alergias_radio = document.querySelectorAll('input[name="alergias"]');
-const alergias_descp = document.querySelector('#alergias_descp');
-let alergia_value = '';
-alergias_descp.style.display = 'none';
+        sifilis_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        sifilis_descp.style.display = 'block';
+        sifilis_descp.value = sifilis_value;
+        } else {
+        sifilis_descp.style.display = 'none';
+        sifilis_value = sifilis_descp.value;
+        sifilis_descp.value = '';
+        }
+        });
+        });
 
-if(alergias_radio[0].checked){
-  alergias_descp.style.display = 'block';
+        // desmayos
+        const desmayos_radio = document.querySelectorAll('input[name="desmayos"]');
+        const desmayos_descp = document.querySelector('#desmayos_descp');
+        let desmayos_value = '';
+        desmayos_descp.style.display = 'none';
 
-  alergia_value = alergias_descp.value;
-} else if (alergias_radio[1].checked){
-  alergias_descp.style.display = 'none';
-  alergias_descp.value = '';
-}
+        if(desmayos_radio[0].checked){
+        desmayos_descp.style.display = 'block';
+        desmayos_value = desmayos_descp.value;
+        } else if (desmayos_radio[1].checked){
+        desmayos_descp.style.display = 'none';
+        desmayos_descp.value = '';
+        }
 
-alergias_radio.forEach(button => {
-  button.addEventListener('click', () => {
-    if (button.value === '1') {
-      alergias_descp.style.display = 'block';
-      alergias_descp.value = alergia_value;
-    } else {
-      alergias_descp.style.display = 'none';
-      alergia_value = alergias_descp.value;
-      alergias_descp.value = '';
-    }
-  });
-});
+        desmayos_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        desmayos_descp.style.display = 'block';
+        desmayos_descp.value = desmayos_value;
+        } else {
+        desmayos_descp.style.display = 'none';
+        desmayos_value = desmayos_descp.value;
+        desmayos_descp.value = '';
+        }
+        });
+        });
 
-// medicamentos
-const medicamentos_que_toma_radio = document.querySelectorAll('input[name="medicamentos_que_toma"]');
-const medicamentos_que_toma_descp = document.querySelector('#medicamentos_que_toma_descp');
-let medicamentos_value = '';
-medicamentos_que_toma_descp.style.display = 'none';
+        // sangrado
+        const sangra_mucho_radio = document.querySelectorAll('input[name="sangra_mucho"]');
+        const sangra_mucho_descp = document.querySelector('#sangra_mucho_descp');
+        let sangra_mucho_value = '';
+        sangra_mucho_descp.style.display = 'none';
 
-if(medicamentos_que_toma_radio[0].checked){
-medicamentos_que_toma_descp.style.display = 'block';
-medicamentos_value = medicamentos_que_toma_descp.value;
-} else if (medicamentos_que_toma_radio[1].checked){
-medicamentos_que_toma_descp.style.display = 'none';
-medicamentos_que_toma_descp.value = '';
-}
+        if(sangra_mucho_radio[0].checked){
+        sangra_mucho_descp.style.display = 'block';
+        sangra_mucho_value = sangra_mucho_descp.value;
+        } else if (sangra_mucho_radio[1].checked){
+        sangra_mucho_descp.style.display = 'none';
+        sangra_mucho_descp.value = '';
+        }
 
-medicamentos_que_toma_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-medicamentos_que_toma_descp.style.display = 'block';
-medicamentos_que_toma_descp.value = medicamentos_value;
-} else {
-medicamentos_que_toma_descp.style.display = 'none';
-medicamentos_value = medicamentos_que_toma_descp.value;
-medicamentos_que_toma_descp.value = '';
-}
-});
-});
+        sangra_mucho_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        sangra_mucho_descp.style.display = 'block';
+        sangra_mucho_descp.value = sangra_mucho_value;
+        } else {
+        sangra_mucho_descp.style.display = 'none';
+        sangra_mucho_value = sangra_mucho_descp.value;
+        sangra_mucho_descp.value = '';
+        }
+        });
+        });
 
-// antibioticos
-const antibioticos_radio = document.querySelectorAll('input[name="antibioticos"]');
-const antibioticos_descp = document.querySelector('#antibioticos_descp');
-let antibioticos_value = '';
-antibioticos_descp.style.display = 'none';
+        //cicatrizar
+        const cicatrizar_heridas_radio = document.querySelectorAll('input[name="cicatrizar_heridas"]' );
+        const cicatrizar_heridas_descp = document.querySelector('#cicatrizar_heridas_descp');
+        let cicatrizar_value_='';
+        cicatrizar_heridas_descp.style.display = 'none';
 
-if(antibioticos_radio[0].checked){
-antibioticos_descp.style.display = 'block';
-antibioticos_value = antibioticos_descp.value;
-} else if (antibioticos_radio[1].checked){
-antibioticos_descp.style.display = 'none';
-antibioticos_descp.value = '';
-}
+        if(cicatrizar_heridas_radio[0].checked){
+        cicatrizar_heridas_descp.style.display = 'block';
+        cicatrizar_value_ = cicatrizar_heridas_descp.value;
+        } else if (cicatrizar_heridas_radio[1].checked){
+        cicatrizar_heridas_descp.style.display = 'none';
+        cicatrizar_heridas_descp.value = '';
+        }
 
-antibioticos_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-antibioticos_descp.style.display = 'block';
-antibioticos_descp.value = antibioticos_value;
-} else {
-antibioticos_descp.style.display = 'none';
-antibioticos_value = antibioticos_descp.value;
-antibioticos_descp.value = '';
-}
-});
-});
+        cicatrizar_heridas_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        cicatrizar_heridas_descp.style.display = 'block';
+        cicatrizar_heridas_descp.value = cicatrizar_value_;
+        } else {
+        cicatrizar_heridas_descp.style.display = 'none';
+        cicatrizar_value_ = cicatrizar_heridas_descp.value;
+        cicatrizar_heridas_descp.value = '';
+        }
+        });
+        });
 
-// Enfermo del corazón
-const enfermo_del_corazon_radio = document.querySelectorAll('input[name="enfermo_del_corazon"]');
-const enfermo_del_corazon_descp = document.querySelector('#enfermo_del_corazon_descp');
-let enfermo_del_corazon_value = '';
-enfermo_del_corazon_descp.style.display = 'none';
+        //sida
+        const sida_descp = document.querySelector('#sida_descp');
+        const sida_radio = document.querySelectorAll('input[name="sida"]');
 
-if (enfermo_del_corazon_radio[0].checked) {
-enfermo_del_corazon_descp.style.display = 'block';
-enfermo_del_corazon_value = enfermo_del_corazon_descp.value;
-} else if (enfermo_del_corazon_radio[1].checked) {
-enfermo_del_corazon_descp.style.display = 'none';
-enfermo_del_corazon_descp.value = '';
-}
+        let sida_value = '';
+        sida_descp.style.display = 'none';
 
-enfermo_del_corazon_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-enfermo_del_corazon_descp.style.display = 'block';
-enfermo_del_corazon_descp.value = enfermo_del_corazon_value;
-} else {
-enfermo_del_corazon_descp.style.display = 'none';
-enfermo_del_corazon_value = enfermo_del_corazon_descp.value;
-enfermo_del_corazon_descp.value = '';
-}
-});
-});
+        if (sida_radio[0].checked) {
+        sida_descp.style.display = 'block';
+        sida_value = sida_descp.value;
+        } else if (sida_radio[1].checked) {
+        sida_descp.style.display = 'none';
+        sida_descp.value = '';
+        }
 
-//hepatitis
-const hepatitis_radio = document.querySelectorAll('input[name="hepatitis"]');
-const hepatitis_descp = document.querySelector('#hepatitis_descp');
-let hepatitis_value = '';
-hepatitis_descp.style.display = 'none';
+        sida_radio.forEach(button => {
+        button.addEventListener('click', () => {
+        if (button.value === '1') {
+        sida_descp.style.display = 'block';
+        sida_descp.value = sida_value;
+        } else {
+        sida_descp.style.display = 'none';
+        sida_value = sida_descp.value;
+        sida_descp.value = '';
+        }
+        });
+        });
 
-if (hepatitis_radio[0].checked) {
-hepatitis_descp.style.display = 'block';
-hepatitis_value = hepatitis_descp.value;
-} else if (hepatitis_radio[1].checked) {
-hepatitis_descp.style.display = 'none';
-hepatitis_descp.value = '';
-}
-
-hepatitis_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-hepatitis_descp.style.display = 'block';
-hepatitis_descp.value = hepatitis_value;
-} else {
-hepatitis_descp.style.display = 'none';
-hepatitis_value = hepatitis_descp.value;
-hepatitis_descp.value = '';
-}
-});
-});
-
-//diabetes
-const diabetes_radio = document.querySelectorAll('input[name="diabetes"]');
-const diabetes_descp = document.querySelector('#diabetes_descp');
-let diabetes_value = '';
-diabetes_descp.style.display = 'none';
-
-if (diabetes_radio[0].checked) {
-diabetes_descp.style.display = 'block';
-diabetes_value = diabetes_descp.value;
-} else if (diabetes_radio[1].checked) {
-diabetes_descp.style.display = 'none';
-diabetes_descp.value = '';
-}
-
-diabetes_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-diabetes_descp.style.display = 'block';
-diabetes_descp.value = diabetes_value;
-} else {
-diabetes_descp.style.display = 'none';
-diabetes_value = diabetes_descp.value;
-diabetes_descp.value = '';
-}
-});
-});
-
-// sifilis
-const sifilis_radio = document.querySelectorAll('input[name="sifilis"]');
-const sifilis_descp = document.querySelector('#sifilis_descp');
-let sifilis_value = '';
-sifilis_descp.style.display = 'none';
-
-if(sifilis_radio[0].checked){
-sifilis_descp.style.display = 'block';
-sifilis_value = sifilis_descp.value;
-} else if (sifilis_radio[1].checked){
-sifilis_descp.style.display = 'none';
-sifilis_descp.value = '';
-}
-
-sifilis_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-sifilis_descp.style.display = 'block';
-sifilis_descp.value = sifilis_value;
-} else {
-sifilis_descp.style.display = 'none';
-sifilis_value = sifilis_descp.value;
-sifilis_descp.value = '';
-}
-});
-});
-
-// desmayos
-const desmayos_radio = document.querySelectorAll('input[name="desmayos"]');
-const desmayos_descp = document.querySelector('#desmayos_descp');
-let desmayos_value = '';
-desmayos_descp.style.display = 'none';
-
-if(desmayos_radio[0].checked){
-desmayos_descp.style.display = 'block';
-desmayos_value = desmayos_descp.value;
-} else if (desmayos_radio[1].checked){
-desmayos_descp.style.display = 'none';
-desmayos_descp.value = '';
-}
-
-desmayos_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-desmayos_descp.style.display = 'block';
-desmayos_descp.value = desmayos_value;
-} else {
-desmayos_descp.style.display = 'none';
-desmayos_value = desmayos_descp.value;
-desmayos_descp.value = '';
-}
-});
-});
-
-// sangrado
-const sangra_mucho_radio = document.querySelectorAll('input[name="sangra_mucho"]');
-const sangra_mucho_descp = document.querySelector('#sangra_mucho_descp');
-let sangra_mucho_value = '';
-sangra_mucho_descp.style.display = 'none';
-
-if(sangra_mucho_radio[0].checked){
-sangra_mucho_descp.style.display = 'block';
-sangra_mucho_value = sangra_mucho_descp.value;
-} else if (sangra_mucho_radio[1].checked){
-sangra_mucho_descp.style.display = 'none';
-sangra_mucho_descp.value = '';
-}
-
-sangra_mucho_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-sangra_mucho_descp.style.display = 'block';
-sangra_mucho_descp.value = sangra_mucho_value;
-} else {
-sangra_mucho_descp.style.display = 'none';
-sangra_mucho_value = sangra_mucho_descp.value;
-sangra_mucho_descp.value = '';
-}
-});
-});
-
-//cicatrizar
-const cicatrizar_heridas_radio = document.querySelectorAll('input[name="cicatrizar_heridas"]' );
-const cicatrizar_heridas_descp = document.querySelector('#cicatrizar_heridas_descp');
-let cicatrizar_value_='';
-cicatrizar_heridas_descp.style.display = 'none';
-
-if(cicatrizar_heridas_radio[0].checked){
-cicatrizar_heridas_descp.style.display = 'block';
-cicatrizar_value_ = cicatrizar_heridas_descp.value;
-} else if (cicatrizar_heridas_radio[1].checked){
-cicatrizar_heridas_descp.style.display = 'none';
-cicatrizar_heridas_descp.value = '';
-}
-
-cicatrizar_heridas_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-cicatrizar_heridas_descp.style.display = 'block';
-cicatrizar_heridas_descp.value = cicatrizar_value_;
-} else {
-cicatrizar_heridas_descp.style.display = 'none';
-cicatrizar_value_ = cicatrizar_heridas_descp.value;
-cicatrizar_heridas_descp.value = '';
-}
-});
-});
-
-  //sida
-const sida_descp = document.querySelector('#sida_descp');
-const sida_radio = document.querySelectorAll('input[name="sida"]');
-
-let sida_value = '';
-sida_descp.style.display = 'none';
-
-if (sida_radio[0].checked) {
-sida_descp.style.display = 'block';
-sida_value = sida_descp.value;
-} else if (sida_radio[1].checked) {
-sida_descp.style.display = 'none';
-sida_descp.value = '';
-}
-
-sida_radio.forEach(button => {
-button.addEventListener('click', () => {
-if (button.value === '1') {
-sida_descp.style.display = 'block';
-sida_descp.value = sida_value;
-} else {
-sida_descp.style.display = 'none';
-sida_value = sida_descp.value;
-sida_descp.value = '';
-}
-});
-});
-
-  }
+        }
 </script>
