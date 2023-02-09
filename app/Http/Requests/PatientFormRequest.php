@@ -35,7 +35,7 @@ class PatientFormRequest extends FormRequest
    'direccion'                   => ['required', 'string', 'max:255'],
    'nombre_contacto'             => ['required', 'string', 'max:255'],
    'telefono_contacto'           => ['required', 'numeric'],
-   'nombre_telefono_doctor'      => ['string', 'max:255'],
+   'nombre_telefono_doctor'      => ['string', 'nullable'],
    'tratamiento_medico'          => ['required', 'string', 'max:255'],
    'tratamiento_medico_descp'    => ['string', 'max:255', 'nullable'],
    'alergias'                    => ['required', 'string', 'max:255'],
@@ -60,7 +60,7 @@ class PatientFormRequest extends FormRequest
    'cicatrizar_heridas_descp'    => ['string', 'max:255', 'nullable'],
    'sida'                        => ['required', 'string', 'max:255'],
    'sida_descp'                  => ['string', 'max:255', 'nullable'],
-   'comentarios'                 => ['string', 'max:255', 'nullable'],
+   'comentarios'                 => ['string', 'nullable'],
    'deuda'                       => 'nullable',
   ];
  }

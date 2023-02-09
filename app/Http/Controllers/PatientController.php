@@ -40,8 +40,9 @@ class PatientController extends Controller
    }
    $deudas[$patient->id] = $deuda;
   }
+  $page = $patients->currentPage();
 
-  return view('patient.index', compact('patients', 'deudas', 'sort', 'order'));
+  return view('patient.index', compact('patients', 'deudas', 'sort', 'order', 'page'));
  }
 
  public function create()
@@ -96,7 +97,7 @@ class PatientController extends Controller
    'comentarios'                 => $data['comentarios'],
 
   ]);
-  return redirect('/pacientes')->with('message', 'Paciente creado correctamente');
+  return redirect('/pacientes')->with('success', 'Paciente registrado');
 
  }
 

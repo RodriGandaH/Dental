@@ -12,112 +12,112 @@ use Illuminate\Http\Request;
 
 class PagoController extends Controller
 {
-  /**
-   * Display a listing of the resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  /* public function index(Request $request, Patient $patient, Tratamiento $tratamiento)
-  {
-  $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->paginate(10);
-  return view('tratamiento.show', compact('pagos', 'patient', 'tratamiento'));
-  } */
+ /**
+  * Display a listing of the resource.
+  *
+  * @return \Illuminate\Http\Response
+  */
+ /* public function index(Request $request, Patient $patient, Tratamiento $tratamiento)
+ {
+ $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->paginate(10);
+ return view('tratamiento.show', compact('pagos', 'patient', 'tratamiento'));
+ } */
 
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function create(Request $request, $patient, $tratamiento)
-  {
+ /**
+  * Show the form for creating a new resource.
+  *
+  * @return \Illuminate\Http\Response
+  */
+ public function create(Request $request, $patient, $tratamiento)
+ {
 
-    // Aquí podrías validar que el paciente y el tratamiento existan en la base de datos antes de continuar
-    $patient         = Patient::findOrFail($patient);
-    $tratamiento     = Tratamiento::findOrFail($tratamiento);
-    $pagos           = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
-    $cantidad_pagada = $pagos->sum('abono');
-    $saldo_pendiente = $tratamiento->costo - $cantidad_pagada;
+  // Aquí podrías validar que el paciente y el tratamiento existan en la base de datos antes de continuar
+  $patient         = Patient::findOrFail($patient);
+  $tratamiento     = Tratamiento::findOrFail($tratamiento);
+  $pagos           = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
+  $cantidad_pagada = $pagos->sum('abono');
+  $saldo_pendiente = $tratamiento->costo - $cantidad_pagada;
 
-    // Luego podrías retornar la vista para crear un nuevo pago, pasando el paciente y tratamiento como parámetros
-    return view('pago.create', compact('patient', 'tratamiento', 'pagos', 'cantidad_pagada', 'saldo_pendiente'));
+  // Luego podrías retornar la vista para crear un nuevo pago, pasando el paciente y tratamiento como parámetros
+  return view('pago.create', compact('patient', 'tratamiento', 'pagos', 'cantidad_pagada', 'saldo_pendiente'));
+ }
+
+ /**
+  * Store a newly created resource in storage.
+  *
+  * @param  \Illuminate\Http\Request  $request
+  * @return \Illuminate\Http\Response
+  */
+ public function store(PagoFormRequest $request, Patient $patient, Tratamiento $tratamiento)
+ {
+
+  $data = $request->validated();
+
+  $costo       = $tratamiento->costo;
+  $abono_total = 0;
+
+  $pagos = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
+  foreach ($pagos as $pago) {
+   $abono_total += $pago->abono;
   }
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @return \Illuminate\Http\Response
-   */
-  public function store(PagoFormRequest $request, Patient $patient, Tratamiento $tratamiento)
-  {
+  $saldo = $costo - $abono_total - $data['abono'];
 
-    $data = $request->validated();
+  $pago = Pago::create([
+   'patient_id'      => $patient->id,
+   'tratamiento_id'  => $tratamiento->id,
+   'costo'           => $costo,
+   'abono'           => $data['abono'],
+   'saldo_pendiente' => $saldo,
+   'fecha_pago'      => Carbon::now(),
+  ]);
 
-    $costo       = $tratamiento->costo;
-    $abono_total = 0;
+  return redirect()->route('tratamiento.show', [$patient->id, $tratamiento->id])->with('success', 'Pago registrado');
+ }
 
-    $pagos = Pago::where('patient_id', $patient->id)->where('tratamiento_id', $tratamiento->id)->get();
-    foreach ($pagos as $pago) {
-      $abono_total += $pago->abono;
-    }
+ /**
+  * Display the specified resource.
+  *
+  * @param  \App\Models\Pago  $pago
+  * @return \Illuminate\Http\Response
+  */
+ public function show(Pago $pago)
+ {
+  //
+ }
 
-    $saldo = $costo - $abono_total - $data['abono'];
+ /**
+  * Show the form for editing the specified resource.
+  *
+  * @param  \App\Models\Pago  $pago
+  * @return \Illuminate\Http\Response
+  */
+ public function edit(Pago $pago)
+ {
+  //
+ }
 
-    $pago = Pago::create([
-      'patient_id'      => $patient->id,
-      'tratamiento_id'  => $tratamiento->id,
-      'costo'           => $costo,
-      'abono'           => $data['abono'],
-      'saldo_pendiente' => $saldo,
-      'fecha_pago'      => Carbon::now(),
-    ]);
+ /**
+  * Update the specified resource in storage.
+  *
+  * @param  \Illuminate\Http\Request  $request
+  * @param  \App\Models\Pago  $pago
+  * @return \Illuminate\Http\Response
+  */
+ public function update(Request $request, Pago $pago)
+ {
+  //
+ }
 
-    return redirect()->route('tratamiento.show', [$patient->id, $tratamiento->id])->with('success', 'Pago creado correctamente');
-  }
-
-  /**
-   * Display the specified resource.
-   *
-   * @param  \App\Models\Pago  $pago
-   * @return \Illuminate\Http\Response
-   */
-  public function show(Pago $pago)
-  {
-    //
-  }
-
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  \App\Models\Pago  $pago
-   * @return \Illuminate\Http\Response
-   */
-  public function edit(Pago $pago)
-  {
-    //
-  }
-
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  \App\Models\Pago  $pago
-   * @return \Illuminate\Http\Response
-   */
-  public function update(Request $request, Pago $pago)
-  {
-    //
-  }
-
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  \App\Models\Pago  $pago
-   * @return \Illuminate\Http\Response
-   */
-  public function destroy(Pago $pago)
-  {
-    //
-  }
+ /**
+  * Remove the specified resource from storage.
+  *
+  * @param  \App\Models\Pago  $pago
+  * @return \Illuminate\Http\Response
+  */
+ public function destroy(Pago $pago)
+ {
+  //
+ }
 
 }

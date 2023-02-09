@@ -365,7 +365,7 @@
                         class="block mb-2 text-sm font-medium mt-3 text-gray-900 ">Comentarios</label>
                     <textarea id="comentarios" rows="4" name="comentarios"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Escribe los message aqui..."></textarea>
+                        placeholder="Escribe el comentario aqui..."></textarea>
                     <div class="flex justify-between">
                         <x-primary-button class="mt-3 ml-3">
                             {{ __('Guardar') }}

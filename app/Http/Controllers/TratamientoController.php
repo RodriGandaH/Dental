@@ -18,7 +18,7 @@ class TratamientoController extends Controller
   */
  public function index(Request $request, Patient $patient)
  {
-  $tratamientos = $patient->tratamientos()->paginate(10);
+  $tratamientos = $patient->tratamientos()->paginate(5);
   foreach ($tratamientos as $tratamiento) {
    $abonado         = 0;
    $saldo_pendiente = $tratamiento->costo;
@@ -33,8 +33,9 @@ class TratamientoController extends Controller
    $tratamiento->abonado         = $abonado;
    $tratamiento->saldo_pendiente = $saldo_pendiente;
   }
+  $page = $tratamientos->currentPage();
 
-  return view('tratamiento.index', compact('tratamientos', 'patient'));
+  return view('tratamiento.index', compact('tratamientos', 'patient', 'page'));
 
  }
 
@@ -72,7 +73,7 @@ class TratamientoController extends Controller
   ]);
   $patient->tratamientos()->save($tratamiento);
 
-  return redirect()->route('tratamiento.index', $patient->id)->with('success', 'Tratamiento creado correctamente');
+  return redirect()->route('tratamiento.index', $patient->id)->with('success', 'Tratamiento registrado');
 
   //return redirect()->route('tratamiento.index', $patient->id)->with('success', 'Tratamiento creado correctamente');
 

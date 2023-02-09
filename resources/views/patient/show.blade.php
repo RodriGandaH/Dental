@@ -116,7 +116,7 @@
                             class="text-gray-900">{{$patient->nombre_telefono_doctor}}</span>
                         @else
                         <span class="text-gray-900 font-semibold">Nombre y telefono de su medico</span> <br><span
-                            class="text-gray-900 font-semibold"> No especificado </span>
+                            class="text-gray-900"> No especificado </span>
                         @endif
 
                     </div>
@@ -129,14 +129,14 @@
                         @if ($patient->tratamiento_medico==1)
                         <span class="text-gray-900">Si </span><br>
                         @if ($patient->tratamiento_medico_descp!=null)
-                        <span class="text-gray-900">{{$patient->tratamiento_medico_descp}}</span>
+                        <span class="text-gray-900">{{$patient->tratamiento_medico_descp}}</span> <br>
                         @endif
                         @else
                         <span class="text-gray-900">No</span>
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Tiene algun tipo de alergia?</span>
+                        <span class="text-gray-900 font-semibold">¿Tiene algun tipo de alergia?</span><br>
                         @if ($patient->alergias==1)
                         <span class="text-gray-900">Si </span> <br>
                         @if ($patient->alergias_descp!=null)
@@ -147,7 +147,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Toma algun tipo de medicamentos?</span></p>
+                        <span class="text-gray-900 font-semibold">¿Toma algun tipo de medicamentos?</span><br>
                         @if ($patient->medicamentos_que_toma==1)
                         <span class="text-gray-900">Si</span> <br>
                         @if ($patient->medicamentos_que_toma_descp!=null)
@@ -158,7 +158,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Toma algun tipo de antibioticos?</span>
+                        <span class="text-gray-900 font-semibold">¿Toma algun tipo de antibioticos?</span><br>
                         @if ($patient->antibioticos==1)
                         <span class="text-gray-900">Si</span> <br>
                         @if ($patient->antibioticos_descp!=null)
@@ -175,7 +175,7 @@
                 </div>
                 <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Esta enfermo del corazon?</span>
+                        <span class="text-gray-900 font-semibold">¿Esta enfermo del corazon?</span><br>
                         @if ($patient->enfermo_del_corazon==1)
                         <span class="text-gray-900">Si </span> <br>
                         @if ($patient->enfermo_del_corazon_descp!=null)
@@ -186,7 +186,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Tiene hepatitis?</span></p>
+                        <span class="text-gray-900 font-semibold">¿Tiene hepatitis?</span><br>
                         @if ($patient->hepatitis==1)
                         <span class="text-gray-900">Si </span><br>
                         @if ($patient->hepatitis_descp!=null)
@@ -195,11 +195,11 @@
 
 
                         @else
-                        <span class="text-gray-900"> No</span>
+                        <span class="text-gray-900"> No</span><br>
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Tiene diabetes?</span>
+                        <span class="text-gray-900 font-semibold">¿Tiene diabetes?</span><br>
                         @if ($patient->diabetes==1)
                         <span class="text-gray-900">Si</span> <br>
                         @if ($patient->diabetes_descp!=null)
@@ -212,7 +212,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Tiene o tuvo sífilis?</span>
+                        <span class="text-gray-900 font-semibold">¿Tiene o tuvo sífilis?</span><br>
                         @if ($patient->sifilis==1)
                         <span class="text-gray-900">Si</span> <br>
                         @if ($patient->sifilis_descp!=null)
@@ -226,7 +226,7 @@
                 </div>
                 <div class="grid md:grid-cols-12 sm:grid-cols-1 gap-2 mt-4">
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900 font-semibold">¿Tiene desmayos con frecuencia?</span>
+                        <span class="text-gray-900 font-semibold">¿Tiene desmayos con frecuencia?</span><br>
                         @if ($patient->desmayos==1)
                         <span class="text-gray-900">Si </span> <br>
                         @if ($patient->desmayos_descp!=null)
@@ -238,7 +238,7 @@
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
                         <span class="text-gray-900 font-semibold">¿Sangra mucho cuando se corta o extraen un
-                            diente?</span>
+                            diente?</span><br>
                         @if ($patient->sangra_mucho==1)
                         <span class="text-gray-900">Si </span><br>
                         @if ($patient->sangra_mucho_descp!=null)
@@ -249,7 +249,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900">¿Tarda mucho en cicatrizar sus heridas?</span>
+                        <span class="text-gray-900 font-semibold">¿Tarda mucho en cicatrizar sus heridas?</span><br>
                         @if ($patient->cicatrizas_heridas==1)
                         <span class="text-gray-900">Si</span><br>
                         @if ($patient->cicratizar_heridas_descp!=null)
@@ -260,7 +260,7 @@
                         @endif
                     </div>
                     <div class="md:col-span-3 sm:col-span-1">
-                        <span class="text-gray-900">¿Tiene SIDA?</span>
+                        <span class="text-gray-900 font-semibold">¿Tiene SIDA?</span><br>
                         @if ($patient->sida==1)
                         <span class="text-gray-900">Si </span><br>
                         @if ($patient->sida_descp!=null)

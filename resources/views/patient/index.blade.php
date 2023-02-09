@@ -69,7 +69,8 @@
                                         <tr
                                             class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
                                             <td class="px-6 py-4 whitespace-nowrap  font-medium text-gray-900">{{
-                                                $key+1 }}</td>
+                                                ($page-1) * 5 + $key + 1
+                                                }}</td>
                                             <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                                 $patient->nombre }}</td>
                                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{
