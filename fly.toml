@@ -1,21 +1,24 @@
-# fly.toml file generated for odontonetv1 on 2023-02-08T14:18:53-04:00
+# fly.toml file generated for odontoapp on 2023-02-09T10:55:26-04:00
 
-app = "odontonetv1"
+app = "odontoapp"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
-
-[deploy]
-  release_command = "php /var/www/html/artisan migrate --force"
-
 
 [build]
   [build.args]
     NODE_VERSION = "14"
     PHP_VERSION = "8.1"
 
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
+
 [env]
   APP_ENV = "production"
+  DB_CONNECTION = "mysql"
+  DB_DATABASE = "odontodb"
+  DB_HOST = "34.95.185.76"
+  DB_PORT = "3306"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
