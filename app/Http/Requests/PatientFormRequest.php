@@ -30,7 +30,7 @@ class PatientFormRequest extends FormRequest
    'ocupacion'                   => ['required', 'string', 'max:255'],
    'sexo'                        => ['required', 'in:M,F', 'string', 'max:255'],
    'cedula'                      => ['required', 'numeric', 'unique:patients'],
-   'estado_civil'                => ['required', 'in:S,C,D,V', 'string', 'max:255'],
+   'estado_civil'                => ['required', 'in:S,CC,C,D,V', 'string', 'max:255'],
    'telefono'                    => ['required', 'numeric', 'unique:patients'],
    'direccion'                   => ['required', 'string', 'max:255'],
    'nombre_contacto'             => ['required', 'string', 'max:255'],

@@ -51,8 +51,9 @@
                                 <select id="sexo" name="sexo"
                                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                                     <option value="seleccionar" selected>Selecciona el sexo</option>
-                                    <option value="M">Masculino</option>
-                                    <option value="F">Femenino</option>
+                                    <option value="M" {{ old('sexo')=='M' ? 'selected' : '' }}>Masculino
+                                    </option>
+                                    <option value="F" {{ old('sexo')=='F' ? 'selected' : '' }}>Femenino</option>
                                 </select>
                                 @error('sexo')
                                 <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
@@ -73,10 +74,15 @@
                                 <select id="estado_civil" name="estado_civil"
                                     class="my-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option value="estado" selected>Selecciona el estado civil</option>
-                                    <option value="S">Soltero(a)</option>
-                                    <option value="C">Casado(a)</option>
-                                    <option value="D">Divorciado(a)</option>
-                                    <option value="V">Viudo(a)</option>
+                                    <option value="S" {{ old('estado_civil')=='S' ? 'selected' : '' }}>Soltero(a)
+                                    </option>
+                                    <option value="CC" {{ old('estado_civil')=='CC' ? 'selected' : '' }}>Concubino(a)
+                                    </option>
+                                    <option value="C" {{ old('estado_civil')=='C' ? 'selected' : '' }}>Casado(a)
+                                    </option>
+                                    <option value="D" {{ old('estado_civil')=='D' ? 'selected' : '' }}>Divorciado(a)
+                                    </option>
+                                    <option value="V" {{ old('estado_civil')=='V' ? 'selected' : '' }}>Viudo(a)</option>
                                 </select>
                                 @error('estado_civil')
                                 <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
@@ -134,11 +140,13 @@
                             <x-input-label for="tratamiento_medico" :value="__('¿ Esta en tratamiento médico ?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="tratamiento_medico" value="1" class="form-radio" />
+                                    <input type="radio" name="tratamiento_medico" value="1" class="form-radio" {{
+                                        old('tratamiento_medico', -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="tratamiento_medico" value="0" class="form-radio" />
+                                    <input type="radio" name="tratamiento_medico" value="0" class="form-radio" {{
+                                        old('tratamiento_medico', -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -154,11 +162,13 @@
                             <x-input-label for="alergias" :value="__('¿Tiene algun tipo de alergia?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="alergias" value="1" class="form-radio" />
+                                    <input type="radio" name="alergias" value="1" class="form-radio" {{ old('alergias',
+                                        -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="alergias" value="0" class="form-radio" />
+                                    <input type="radio" name="alergias" value="0" class="form-radio" {{ old('alergias',
+                                        -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -172,11 +182,13 @@
                             <x-input-label for="medicamentos_que_toma" :value="__('Toma algun tipo de medicamento?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="medicamentos_que_toma" value="1" class="form-radio" />
+                                    <input type="radio" name="medicamentos_que_toma" value="1" class="form-radio" {{
+                                        old('medicamentos_que_toma', -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="medicamentos_que_toma" value="0" class="form-radio" />
+                                    <input type="radio" name="medicamentos_que_toma" value="0" class="form-radio" {{
+                                        old('medicamentos_que_toma', -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -193,11 +205,13 @@
                             <x-input-label for="antibioticos" :value="__('Toma algun tipo de antibioticos?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="antibioticos" value="1" class="form-radio" />
+                                    <input type="radio" name="antibioticos" value="1" class="form-radio" {{
+                                        old('antibioticos', -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="antibioticos" value="0" class="form-radio" />
+                                    <input type="radio" name="antibioticos" value="0" class="form-radio" {{
+                                        old('antibioticos', -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -211,11 +225,13 @@
                             <x-input-label for="enfermo_del_corazon" :value="__('Esta enfermo del corazon?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="enfermo_del_corazon" value="1" class="form-radio" />
+                                    <input type="radio" name="enfermo_del_corazon" value="1" class="form-radio" {{
+                                        old('enfermo_del_corazon', -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="enfermo_del_corazon" value="0" class="form-radio" />
+                                    <input type="radio" name="enfermo_del_corazon" value="0" class="form-radio" {{
+                                        old('enfermo_del_corazon', -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -230,11 +246,13 @@
                             <x-input-label for="hepatitis" :value="__('Tiene hepatitis?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="hepatitis" value="1" class="form-radio" />
+                                    <input type="radio" name="hepatitis" value="1" class="form-radio" {{
+                                        old('hepatitis', -1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="hepatitis" value="0" class="form-radio" />
+                                    <input type="radio" name="hepatitis" value="0" class="form-radio" {{
+                                        old('hepatitis', -1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -250,11 +268,13 @@
                             <x-input-label for="diabetes" :value="__('Tiene diabetes?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="diabetes" value="1" class="form-radio" />
+                                    <input type="radio" name="diabetes" value="1" class="form-radio" {{
+                                        old('diabetes',-1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="diabetes" value="0" class="form-radio" />
+                                    <input type="radio" name="diabetes" value="0" class="form-radio" {{
+                                        old('diabetes',-1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -268,11 +288,13 @@
                             <x-input-label for="sifilis" :value="__('Tiene o tuvo sífilis?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="sifilis" value="1" class="form-radio" />
+                                    <input type="radio" name="sifilis" value="1" class="form-radio" {{
+                                        old('sifilis',-1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="sifilis" value="0" class="form-radio" />
+                                    <input type="radio" name="sifilis" value="0" class="form-radio" {{
+                                        old('sifilis',-1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -286,11 +308,13 @@
                             <x-input-label for="desmayos" :value="__('Tiene desmayos con frecuencia?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="desmayos" value="1" class="form-radio" />
+                                    <input type="radio" name="desmayos" value="1" class="form-radio" {{
+                                        old('desmayos',-1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="desmayos" value="0" class="form-radio" />
+                                    <input type="radio" name="desmayos" value="0" class="form-radio" {{
+                                        old('desmayos',-1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -307,11 +331,13 @@
                                 :value="__('Sangra mucho cuando se corta o extraen un diente?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="sangra_mucho" value="1" class="form-radio" />
+                                    <input type="radio" name="sangra_mucho" value="1" class="form-radio" {{
+                                        old('sangra_mucho',-1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="sangra_mucho" value="0" class="form-radio" />
+                                    <input type="radio" name="sangra_mucho" value="0" class="form-radio" {{
+                                        old('sangra_mucho',-1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -326,11 +352,13 @@
                                 :value="__('Tarda mucho en cicatrizar sus heridas?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="cicatrizar_heridas" value="1" class="form-radio" />
+                                    <input type="radio" name="cicatrizar_heridas" value="1" class="form-radio" {{
+                                        old('cicatrizar_heridas',-1)==1 ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="cicatrizar_heridas" value="0" class="form-radio" />
+                                    <input type="radio" name="cicatrizar_heridas" value="0" class="form-radio" {{
+                                        old('cicatrizar_heridas',-1)==0 ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -345,11 +373,13 @@
                             <x-input-label for="sida" :value="__('Tiene SIDA?')" />
                             <div class="ml-3">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="sida" value="1" class="form-radio" />
+                                    <input type="radio" name="sida" value="1" class="form-radio" {{ old('sida',-1)==1
+                                        ? 'checked' : '' }} />
                                     <span class="ml-2">Sí</span>
                                 </label>
                                 <label class="inline-flex items-center ml-3">
-                                    <input type="radio" name="sida" value="0" class="form-radio" />
+                                    <input type="radio" name="sida" value="0" class="form-radio" {{ old('sida',-1)==0
+                                        ? 'checked' : '' }} />
                                     <span class="ml-2">No</span>
                                 </label>
                             </div>
@@ -361,15 +391,15 @@
                         </div>
                     </div>
                     <hr class="h-px my-3 bg-gray-400 border-1">
+
                     <label for="comentarios"
                         class="block mb-2 text-sm font-medium mt-3 text-gray-900 ">Comentarios</label>
                     <textarea id="comentarios" rows="4" name="comentarios"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Escribe el comentario aqui..."></textarea>
+                        placeholder="Escribe el comentario aqui...">{{old('comentarios')}}</textarea>
                     <div class="flex justify-between">
                         <x-primary-button class="mt-3 ml-3">
-                            {{ __('Guardar') }}
-                        </x-primary-button>
+                            {{ __(' Guardar') }} </x-primary-button>
                         <a class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
         border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
         focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
@@ -414,6 +444,9 @@
     const sangra_mucho_descp = document.querySelector('#sangra_mucho_descp');
     const cicatrizar_heridas_descp = document.querySelector('#cicatrizar_heridas_descp');
     const sida_descp = document.querySelector('#sida_descp');
+
+    //mantener datos si hay error
+    const hasError = document.querySelector('.text-red-600');
 
     //Ocultar y deshabilitar el input de texto al cargar la página
     tratamiento_medico_descp.style.display = 'none';
@@ -598,6 +631,7 @@
     }
     });
     });
+
 
   }
 </script>

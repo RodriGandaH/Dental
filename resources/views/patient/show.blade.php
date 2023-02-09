@@ -72,6 +72,9 @@
                             @if ($patient->estado_civil == 'S')
                             <span class="text-gray-900 font-semibold">Estado civil </span> <br> <span
                                 class="text-gray-900">Soltero(a) </span>
+                            @elseif($patient->estado_civil == 'CC')
+                            <span class="text-gray-900 font-semibold">Estado civil </span> <br> <span
+                                class="text-gray-900">Concubino(a)</span>
                             @elseif($patient->estado_civil == 'C')
                             <span class="text-gray-900 font-semibold">Estado civil </span> <br> <span
                                 class="text-gray-900">Casado(a)</span>
