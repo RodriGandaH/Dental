@@ -163,7 +163,8 @@
                                             </tr>
                                             @empty
                                             <tr>
-                                                <td class="text-center pt-4" colspan="6">Este paciente aun no realizo
+                                                <td class="text-gray-900 text-center pt-4" colspan="12">Este paciente
+                                                    aun no realizo
                                                     pagos</td>
                                             </tr>
                                             @endforelse

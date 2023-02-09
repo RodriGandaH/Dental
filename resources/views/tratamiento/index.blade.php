@@ -24,7 +24,7 @@
                                 <table class="min-w-full">
                                     <thead class="bg-gray-800 border-b">
                                         <tr>
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Id
                                             </th>
 
@@ -32,23 +32,23 @@
                                                     href="{{ route('patient.index', ['sort' => 'birthdate', 'order' => $order == 'asc' ? 'desc' : 'asc']) }}">Fecha
                                                     de nacimiento</a>
                                             </th> --}}
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Tratamiento
                                             </th>
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Fecha
                                             </th>
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Costo
                                             </th>
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Abonado
                                             </th>
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Restante
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Estado
-                                            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                                            <th scope="col" class=" font-medium text-white px-6 py-4 text-left">
                                                 Ver</th>
                                         </tr>
                                     </thead>
@@ -59,42 +59,42 @@
                                             <td class="px-6 py-4 whitespace-nowrap  font-medium text-gray-900">{{
                                                 ($page-1) * 5 + $key + 1
                                                 }}</td>
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                                 $tratamiento->tratamiento
                                                 }}</td>
                                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{
                                                 $patient->fecha_nacimiento }}</td>
                                             --}}
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                                                 {{ date('d/m/Y', strtotime($tratamiento->fecha_inicio)) }}
                                             </td>
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                                 $tratamiento->costo }}
                                             </td>
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                                 number_format($tratamiento->abonado(),2)
                                                 }}</td>
 
                                             @if ($tratamiento->saldoPendiente() == 0)
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">Pagado</td>
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">Pagado</td>
                                             @else
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">{{
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                                 number_format($tratamiento->saldoPendiente(),2) }}</td>
                                             @endif
                                             @if ($tratamiento->estado == 0)
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap"> <span
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap"> <span
                                                     class="bg-orange-400">En
                                                     curso</span>
                                             </td>
                                             @else
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">Finalizado
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">Finalizado
                                             </td>
                                             @endif
 
                                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{ $tratamiento->abonado
                                                 }}</td> --}}
 
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">
+                                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                                                 <a class=" inline-flex items-center px-4 py-2 bg-slate-600 border border-gray-300
                                                         rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm
                                                         hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
@@ -106,10 +106,16 @@
                                         </tr>
                                         @empty
                                         <tr>
-                                            <td class="text-sm text-gray-900  px-6 py-4 whitespace-nowrap">Este paciente
+                                            <td class=" text-gray-900 text-center  px-6 py-4 whitespace-nowrap"
+                                                colspan="12">
+
+                                                Este paciente
                                                 no tiene
-                                                tratamientos</td>
-                                            @endforelse
+                                                tratamientos
+
+                                            </td>
+                                        </tr>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>

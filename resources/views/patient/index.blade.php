@@ -99,7 +99,8 @@
                                         @empty
                                         <tr>
                                             <td class="text-center pt-4" colspan="12">No hay pacientes registrados</td>
-                                            @endforelse
+                                        </tr>
+                                        @endforelse
                                 </table>
                             </div>
                         </div>
