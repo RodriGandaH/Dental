@@ -46,6 +46,7 @@ class TratamientoController extends Controller
   */
  public function create(Patient $patient)
  {
+
   return view('tratamiento.create', compact('patient'));
  }
 
@@ -57,6 +58,7 @@ class TratamientoController extends Controller
   */
  public function store(TratamientoFormRequest $request, Patient $patient)
  {
+
   $data = $request->validated();
   $rx   = request()->has('rx') ? 1 : 0;
 

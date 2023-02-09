@@ -906,8 +906,7 @@
                                 <div class="md:col-span-3 sm:col-span-1">
                                     <x-input-label for="diente" :value="__('Dientes')" />
                                     <textarea id="diente" rows="2" name="diente"
-                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                                        :value="old('diente')"></textarea>
+                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{old('diente')}}</textarea>
 
                                     @error('diente')
                                     <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
@@ -916,8 +915,7 @@
                                 <div class="md:col-span-4 sm:col-span-1">
                                     <x-input-label for="diagnostico" :value="__('Diagnostico')" />
                                     <textarea id="diagnostico" rows="2" name="diagnostico"
-                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                                        :value="old('diagnostico')"></textarea>
+                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{old('diagnostico')}}</textarea>
                                     @error('diagnostico')
                                     <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
                                     @enderror
@@ -926,14 +924,13 @@
                                     <x-input-label for="rx" :value="__('Rayos X')" />
                                     <input id="rx" type="checkbox" value="0" name="rx"
                                         class="mt-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mx-auto"
-                                        onchange="handleRxChange(this)">
+                                        onchange="handleRxChange(this)" {{ old('rx') ? 'checked' : '' }}>
 
                                 </div>
                                 <div class="md:col-span-3 sm:col-span-1">
                                     <x-input-label for="tratamiento" :value="__('Tratamiento')" />
                                     <textarea id="tratamiento" rows="2" name="tratamiento"
-                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                                        :value="old('tratamiento')"></textarea>
+                                        class="block mt-1 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{old('tratamiento')}}</textarea>
                                     @error('tratamiento')
                                     <span class="text-sm text-red-600 space-y-1">{{ $message }}</span>
                                     @enderror
@@ -969,7 +966,7 @@
                                     <x-input-label for="observaciones" :value="__('Observaciones')" />
                                     <textarea id="observaciones" rows="4" name="observaciones"
                                         class="block p-2.5 w-full text-sm text-gray-900   border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                                        placeholder="Escribe las observaciones aqui..."></textarea>
+                                        placeholder="Escribe las observaciones aqui...">{{old('observaciones')}}</textarea>
                                 </div>
                                 {{-- <div class="md:col-span-1 sm:col-span-1">
                                     <x-input-label for="estado" :value="__('Completado')" />
@@ -1045,5 +1042,4 @@
     inputValores.value = valores;
 });
 });
-
 </script>

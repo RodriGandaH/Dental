@@ -23,6 +23,9 @@
                             href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
                             Pago</a>
                         @else
+                        <div>
+
+                        </div>
                         @endif
                         <a class='inline-flex items-center px-4 py-2 bg-green-500 border
                                                                             border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-green-400
@@ -103,20 +106,7 @@
                             @endif
 
                         </div>
-                        <div class="flex justify-start md:col-span-4 sm:col-span-1">
 
-                            @if($tratamiento->estado == 0)
-
-                            <a class=" inline-flex items-center px-4 py-2 mb-3 bg-gray-800 border
-                                                                border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
-                                                                focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
-                                                                duration-150" type="button"
-                                href="{{ route('tratamiento.finalizar', [$patient->id, $tratamiento->id]) }}">Finalizar
-                                Tratamiento</a>
-                            @else
-
-                            @endif
-                        </div>
 
 
                     </div>
@@ -213,11 +203,30 @@
                                         </tbody>
                                     </table>
 
-                                    <br>
-
 
 
                                 </div>
                             </div>
+
                         </div>
+                    </div>
+                    <div class="flex justify-end">
+
+                        @if($tratamiento->estado == 0)
+
+                        <a class=" inline-flex items-center px-4 py-2 bg-gray-800 border
+                                                                                                                    border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
+                                                                                                                    focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
+                                                                                                                    duration-150"
+                            type="button"
+                            href="{{ route('tratamiento.finalizar', [$patient->id, $tratamiento->id]) }}">Finalizar
+                            Tratamiento</a>
+                        @else
+
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-app-layout>
