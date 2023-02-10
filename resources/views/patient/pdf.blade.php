@@ -359,79 +359,129 @@
     <div class="odontograma">
         <img src="assets/odontograma.png" alt="odontograma" width="700">
     </div>
-    <table style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
-        <tbody>
-            <tr>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:10%;">
-                    <span class="titulo-tablas"><b>DIENTE</b></span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:15%;">
-                    <span class="titulo-tablas"><b>DIAGNOSTICO</b></span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;width:4%;">
-                    <span class="titulo-tablas"> <b>Rx</b> </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"> <b>TRATAMIENTO</b> </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"><b>COSTO</b> </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"><b>FECHA INICIO</b></span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"> <b>FECHA CONCLUSIÓN</b> </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"><b>OBSERVACIONES</b> </span>
-                </td>
-            </tr>
-            <tr>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:10%;">
-                    <span class="titulo-tablas">DIENTE</span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:15%;">
-                    <span class="titulo-tablas">DIAGNOSTICO</span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;width:4%;">
-                    <span class="titulo-tablas"> Rx </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"> TRATAMIENTO </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas">COSTO </span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas">FECHA INICIO</span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas"> FECHA CONCLUSIÓN</span>
-                </td>
-                <td
-                    style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                    <span class="titulo-tablas">OBSERVACIONES</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <table
+            style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:10%;">
+                        <span class="titulo-tablas"><b>DIENTE</b></span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:15%;">
+                        <span class="titulo-tablas"><b>DIAGNOSTICO</b></span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;width:4%;">
+                        <span class="titulo-tablas"> <b>Rx</b> </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"> <b>TRATAMIENTO</b> </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"><b>COSTO</b> </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"><b>FECHA INICIO</b></span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"> <b>FECHA CONCLUSIÓN</b> </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"><b>OBSERVACIONES</b> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:10%;">
+                        <span class="titulo-tablas">DIENTE</span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:15%;">
+                        <span class="titulo-tablas">DIAGNOSTICO</span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;width:4%;">
+                        <span class="titulo-tablas"> Rx </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"> TRATAMIENTO </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas">COSTO </span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas">FECHA INICIO</span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas"> FECHA CONCLUSIÓN</span>
+                    </td>
+                    <td
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span class="titulo-tablas">OBSERVACIONES</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    @php
+    $tablas =50;
+    @endphp
 
-</body>
+    <div style="width:100%; margin-top:10px;">
+        @for ($i =1 ; $i <= $tablas ; $i++ ) @if ($i>33 && $i<37) <div
+                style="border: 1px solid black;display:inline-block;width:31.7%;margin-top:50px; margin-left:5px;border-radius: 3px; margin-bottom:0;">
+                <table
+                    style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
+                    <tbody>
+
+                        <tr>
+                            <td style="border: 1px solid black;width:100%; text-align:center;"><b>Fecha</b> </td>
+                            <td style="border: 1px solid black;width:100%; text-align:center;"><b>A cuenta</b> </td>
+                            <td style="border: 1px solid black;width:100%; text-align:center;"> <b>Saldo</b></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;width:100%;">Valor 1</td>
+                            <td style="border: 1px solid black;width:100%;">Valor 2</td>
+                            <td style="border: 1px solid black;width:100%;">Valor 3</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+    </div>
+    @else<div
+        style="border: 1px solid black;display:inline-block;width:31.7%;margin-top:10px; margin-left:5px;border-radius: 3px;">
+        <table
+            style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
+            <tbody>
+
+                <tr>
+                    <td style="border: 1px solid black;width:100%; text-align:center;"><b>Fecha</b> </td>
+                    <td style="border: 1px solid black;width:100%; text-align:center;"><b>A cuenta</b> </td>
+                    <td style="border: 1px solid black;width:100%; text-align:center;"> <b>Saldo</b></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black;width:100%;">Valor 1</td>
+                    <td style="border: 1px solid black;width:100%;">Valor 2</td>
+                    <td style="border: 1px solid black;width:100%;">Valor 3</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div> @endif
+    @endfor
+
+    </div>
+    {{-- @if ($i>=33 && $i<=36) @else @endif --}} </body>
 
 </html>
