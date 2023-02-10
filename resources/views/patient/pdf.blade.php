@@ -31,7 +31,7 @@
     }
 
     .p-inicio {
-        font-size: 14px;
+        font-size: 13px;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -55,6 +55,10 @@
         font-size: 13px;
     }
 
+    span {
+        font-size: 13px;
+    }
+
     .page-break {
         page-break-after: always;
     }
@@ -62,6 +66,10 @@
     .logo-texto {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
+    }
+
+    .titulo-tablas {
+        font-size: 13px;
     }
 </style>
 
@@ -400,35 +408,35 @@
                 <tr>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:10%;">
-                        <span class="titulo-tablas">DIENTE</span>
+                        <span>DIENTE</span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center; width:15%;">
-                        <span class="titulo-tablas">DIAGNOSTICO</span>
+                        <span>DIAGNOSTICO</span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;width:4%;">
-                        <span class="titulo-tablas"> Rx </span>
+                        <span> Rx </span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                        <span class="titulo-tablas"> TRATAMIENTO </span>
+                        <span> TRATAMIENTO </span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                        <span class="titulo-tablas">COSTO </span>
+                        <span>COSTO </span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                        <span class="titulo-tablas">FECHA INICIO</span>
+                        <span>FECHA INICIO</span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                        <span class="titulo-tablas"> FECHA CONCLUSIÓN</span>
+                        <span> FECHA CONCLUSIÓN</span>
                     </td>
                     <td
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
-                        <span class="titulo-tablas">OBSERVACIONES</span>
+                        <span>OBSERVACIONES</span>
                     </td>
                 </tr>
             </tbody>
@@ -439,46 +447,31 @@
     @endphp
 
     <div style="width:100%; margin-top:10px;">
-        @for ($i =1 ; $i <= $tablas ; $i++ ) @if ($i>33 && $i<37) <div
-                style="border: 1px solid black;display:inline-block;width:31.7%;margin-top:50px; margin-left:5px;border-radius: 3px; margin-bottom:0;">
-                <table
-                    style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
-                    <tbody>
+        @for ($i =1 ; $i <= $tablas ; $i++ ) <div
+            style="border: 1px solid black;display:inline-block;width:31.7%;margin-top:15px; margin-left:5px;border-radius: 3px;">
+            <p style="text-align:center;margin:0;padding:0;">Tratamiento {{$i}}</p>
+            <table
+                style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
+                <tbody>
 
-                        <tr>
-                            <td style="border: 1px solid black;width:100%; text-align:center;"><b>Fecha</b> </td>
-                            <td style="border: 1px solid black;width:100%; text-align:center;"><b>A cuenta</b> </td>
-                            <td style="border: 1px solid black;width:100%; text-align:center;"> <b>Saldo</b></td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid black;width:100%;">Valor 1</td>
-                            <td style="border: 1px solid black;width:100%;">Valor 2</td>
-                            <td style="border: 1px solid black;width:100%;">Valor 3</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <td style="border: 1px solid black;width:100%; text-align:center;"><span><b>Fecha</b></span>
+                        </td>
+                        <td style="border: 1px solid black;width:100%; text-align:center;"><span><b>A cuenta</b></span>
+                        </td>
+                        <td style="border: 1px solid black;width:100%; text-align:center;"> <span><b>Saldo</b></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;width:100%;"> <span>Valor 1</span> </td>
+                        <td style="border: 1px solid black;width:100%;"> <span>Valor 2</span></td>
+                        <td style="border: 1px solid black;width:100%;"> <span>Valor 3</span></td>
+                    </tr>
+                </tbody>
 
-                </table>
+            </table>
+
     </div>
-    @else<div
-        style="border: 1px solid black;display:inline-block;width:31.7%;margin-top:10px; margin-left:5px;border-radius: 3px;">
-        <table
-            style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
-            <tbody>
-
-                <tr>
-                    <td style="border: 1px solid black;width:100%; text-align:center;"><b>Fecha</b> </td>
-                    <td style="border: 1px solid black;width:100%; text-align:center;"><b>A cuenta</b> </td>
-                    <td style="border: 1px solid black;width:100%; text-align:center;"> <b>Saldo</b></td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid black;width:100%;">Valor 1</td>
-                    <td style="border: 1px solid black;width:100%;">Valor 2</td>
-                    <td style="border: 1px solid black;width:100%;">Valor 3</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </div> @endif
     @endfor
 
     </div>
