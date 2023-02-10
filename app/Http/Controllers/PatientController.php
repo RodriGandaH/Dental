@@ -82,7 +82,7 @@ class PatientController extends Controller
   }
 
   $pdf = Pdf::loadView('patient.pdf2', compact('paciente', 'tratamientos', 'pagos', 'num'));
-  return $pdf->setPaper('letter', 'portrait')->stream('Pacientes.pdf');
+  return $pdf->setPaper('letter', 'portrait')->stream($paciente->nombre . '.pdf');
 
   return view('patient.pdf2');
 
