@@ -97,12 +97,14 @@
                                     focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
                                                     type="button"
                                                     href="{{ route('patient.show', ['id' => $patient->id]) }}">Ver</a>
+                                            </td>
                                         </tr>
                                         @empty
                                         <tr>
                                             <td class="text-center pt-4" colspan="12">No hay pacientes registrados</td>
                                         </tr>
                                         @endforelse
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

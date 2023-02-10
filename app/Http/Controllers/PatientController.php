@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PatientFormRequest;
 use App\Models\Patient;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class PatientController extends Controller
@@ -43,6 +44,16 @@ class PatientController extends Controller
   $page = $patients->currentPage();
 
   return view('patient.index', compact('patients', 'deudas', 'sort', 'order', 'page'));
+ }
+
+ public function pdf()
+ {
+
+  $patients = Patient::all();
+  $pdf      = Pdf::loadView('patient.pdf', compact('patients'));
+  return $pdf->setPaper('letter', 'portrait')->stream();
+
+  return view('patient.pdf');
  }
 
  public function create()
