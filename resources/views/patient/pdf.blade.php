@@ -545,7 +545,7 @@
 
                 @endif
                 @endforeach
-                {{-- @php
+                @php
                 $total_costo=0;
                 foreach($tratamientos as $tratamiento){
                 if($paciente->id==$tratamiento->patient_id){
@@ -563,7 +563,7 @@
                         style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-left: 22px; ">
                         <span><b>{{$total_costo}}</b></span>
                     </td>
-                </tr> --}}
+                </tr>
                 @else
                 <tr>
                     <td colspan="9" style="text-align:center; border: 1px solid black; padding: 2px;">

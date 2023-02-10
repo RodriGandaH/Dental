@@ -543,6 +543,25 @@
                 </tr>
                 @endif
                 @endforeach
+                @php
+                $total_costo=0;
+                foreach($tratamientos as $tratamiento){
+                if($paciente->id==$tratamiento->patient_id){
+                $total_costo+=$tratamiento->costo;
+                }
+                }
+                @endphp
+                <tr>
+                    <td colspan="5"
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 2px; text-align:center;">
+                        <span> <b>Total</b></span>
+
+                    </td>
+                    <td colspan="4"
+                        style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-left: 22px; ">
+                        <span><b>{{$total_costo}}</b></span>
+                    </td>
+                </tr>
                 @else
                 <tr>
                     <td colspan="9" style="text-align:center; border: 1px solid black; padding: 2px;">
