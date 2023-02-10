@@ -45,6 +45,8 @@ Route::patch('/patients/{patient}', [PatientController::class, 'update'])->name(
 Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->name('patients.destroy'); */
 
   Route::get('/pacientes/pdf', [PatientController::class, 'pdf'])->name('patient.pdf');
+  Route::get('/paciente/{id}/pdf', [PatientController::class, 'pdfPaciente'])->name('patient2.pdf');
+
  });
 
  Route::controller(TratamientoController::class)->group(function () {

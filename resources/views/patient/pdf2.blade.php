@@ -74,7 +74,6 @@
 </style>
 
 <body>
-    @foreach ($patients as $key => $paciente )
 
 
     <table style="width: 100%;">
@@ -94,7 +93,7 @@
                     </div>
                     <div
                         style="display: inline-block; border: 1px solid black; border-radius: 2px; padding: 0 5px; width:70px; margin-left:10px;text-align:center;">
-                        <span>{{$key+1}}</span>
+                        <span>{{$num}}</span>
                     </div>
                 </td>
             </tr>
@@ -617,7 +616,7 @@
         @endforeach
     </div>
     <div class="page-break"></div>
-    @endforeach
+
     {{-- @if ($i>=33 && $i<=36) @else @endif --}} </body>
 
 </html>

@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PatientFormRequest;
+use App\Models\Pago;
 use App\Models\Patient;
+use App\Models\Tratamiento;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PatientController extends Controller
 {
@@ -49,11 +52,40 @@ class PatientController extends Controller
  public function pdf()
  {
 
-  $patients = Patient::all();
-  $pdf      = Pdf::loadView('patient.pdf', compact('patients'));
-  return $pdf->setPaper('letter', 'portrait')->stream();
+  $user         = Auth::user();
+  $patients     = $user->patients;
+  $tratamientos = Tratamiento::all();
+  $pagos        = Pago::all();
+
+  $pdf = Pdf::loadView('patient.pdf', compact('patients', 'tratamientos', 'pagos'));
+  return $pdf->setPaper('letter', 'portrait')->stream('Pacientes.pdf');
 
   return view('patient.pdf');
+ }
+
+ public function pdfPaciente($id)
+ {
+  $user      = Auth::user();
+  $pacientes = $user->patients;
+
+  $paciente     = Patient::find($id);
+  $tratamientos = Tratamiento::all();
+  $pagos        = Pago::all();
+
+  //saber que numero de paciente es de este usuario sin inportar el id
+  $num = 0;
+  foreach ($pacientes as $paciente2) {
+   $num++;
+   if ($paciente2->id == $paciente->id) {
+    break;
+   }
+  }
+
+  $pdf = Pdf::loadView('patient.pdf2', compact('paciente', 'tratamientos', 'pagos', 'num'));
+  return $pdf->setPaper('letter', 'portrait')->stream('Pacientes.pdf');
+
+  return view('patient.pdf2');
+
  }
 
  public function create()
