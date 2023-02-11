@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PagoController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RedirectIfAuthenticatedController;
 use App\Http\Controllers\TratamientoController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
- return view('auth.login');
-});
+Route::get('/', [RedirectIfAuthenticatedController::class, '__invoke'])->name('home');
 
 /* Route::get('/dashboard', function () {
 return view('dashboard');
