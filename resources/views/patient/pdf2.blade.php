@@ -487,7 +487,7 @@
                     </td>
                 </tr>
                 @if($paciente->tratamientos->count()>0)
-                @foreach ($tratamientos as $key => $tratamiento )
+                @foreach ($paciente->tratamientos as $key => $tratamiento )
                 @if ($paciente->id==$tratamiento->patient_id)
                 <tr>
                     <td
@@ -574,10 +574,10 @@
         </table>
     </div>
     <div style="width:100%; margin-top:0px;">
-        @foreach ($paciente->tratamientos as $tratamiento)
+        @foreach ($paciente->tratamientos as $key => $tratamiento)
         <div
             style="border: 1px solid black;display:inline-block;width:31.7%; margin-top:10px; margin-left:5px;border-radius: 3px; vertical-align: top;">
-            <p style="text-align:center;margin:0;padding:0;">Tratamiento {{$tratamiento->id}}</p>
+            <p style="text-align:center;margin:0;padding:0;">Tratamiento {{$key+1}}</p>
             <table
                 style="width: 100%; border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse;">
                 <tbody>
@@ -592,12 +592,13 @@
                     </tr>
                     @php
                     $total = 0;
+                    $saldo=$tratamiento->costo;
                     @endphp
                     @foreach ($pagos as $pago )
                     @if($pago->patient_id == $paciente->id && $pago->tratamiento_id == $tratamiento->id)
                     <tr style="text-align: center;">
                         <td style="border: 1px solid black;width:100%;"> <span>{{date('d/m/Y',
-                                strtotime($tratamiento->fecha_pago))}}</span> </td>
+                                strtotime($pago->fecha_pago))}}</span> </td>
                         <td style="border: 1px solid black;width:100%;"> <span>{{ number_format($pago->abono, 0)
                                 }}</span></td>
                         <td style="border: 1px solid black;width:100%;"> <span>{{ number_format($pago->saldo_pendiente,
@@ -605,6 +606,7 @@
                     </tr>
                     @php
                     $total += $pago->abono;
+                    $saldo=$saldo - $pago->abono ;
                     @endphp
                     @endif
                     @endforeach
@@ -616,9 +618,15 @@
                         <td style="border: 1px solid black;width:100%;">
                             <span> <b>{{$total}}</b></span>
                         </td>
+                        @if($saldo>0)
                         <td style="width:100%;">
 
                         </td>
+                        @else
+                        <td style="border: 1px solid black;width:100%; ">
+                            <span> <b>Cancelado</b> </span>
+                        </td>
+                        @endif
 
                     </tr>
                     @endif
