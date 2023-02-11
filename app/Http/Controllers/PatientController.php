@@ -140,7 +140,7 @@ class PatientController extends Controller
    'comentarios'                 => $data['comentarios'],
 
   ]);
-  return redirect('/pacientes')->with('success', 'Paciente registrado');
+  return redirect()->route('tratamiento.create', ['patient' => $patient->id])->with('success', 'Paciente registrado');
 
  }
 

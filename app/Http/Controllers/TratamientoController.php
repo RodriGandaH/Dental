@@ -75,7 +75,7 @@ class TratamientoController extends Controller
   ]);
   $patient->tratamientos()->save($tratamiento);
 
-  return redirect()->route('tratamiento.index', $patient->id)->with('success', 'Tratamiento registrado');
+  return redirect()->route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id])->with('success', 'Tratamiento registrado');
 
   //return redirect()->route('tratamiento.index', $patient->id)->with('success', 'Tratamiento creado correctamente');
 
