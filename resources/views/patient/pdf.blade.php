@@ -437,7 +437,7 @@
     <div class="page-break"></div>
     <h3>Odontograma</h3>
     <div class="odontograma">
-        <img src="assets/odontograma.png" alt="odontograma" width="700">
+        <img src="assets/odontograma.jpg" alt="odontograma" width="700">
     </div>
     <div>
 
