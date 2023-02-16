@@ -9,7 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="grid grid-cols-12 gap-6 mt-5">
-                    <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
+                    <a style="text-decoration:none;"
+                        class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
                         href="#">
                         <div class="p-5">
                             <div class="flex justify-between">
@@ -28,7 +29,8 @@
                             </div>
                             <div class="ml-2 w-full flex-1">
                                 <div>
-                                    <div class="mt-3 text-3xl font-bold leading-8">{{number_format($total_cobrado,2)}}
+                                    <div class="mt-3 text-3xl font-bold text-dark leading-8">
+                                        {{number_format($total_cobrado,2)}}
                                         Bs.
                                     </div>
 
@@ -37,7 +39,8 @@
                             </div>
                         </div>
                     </a>
-                    <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
+                    <a style="text-decoration:none;"
+                        class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
                         href="#">
                         <div class="p-5">
                             <div class="flex justify-between">
@@ -56,7 +59,7 @@
                             </div>
                             <div class="ml-2 w-full flex-1">
                                 <div>
-                                    <div class="mt-3 text-3xl font-bold leading-8">
+                                    <div class="mt-3 text-3xl font-bold leading-8 text-dark">
                                         {{number_format($total_saldo_pendiente,2)}} Bs.</div>
 
                                     <div class="mt-1 text-base text-gray-600">Pendiente</div>
@@ -64,7 +67,8 @@
                             </div>
                         </div>
                     </a>
-                    <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
+                    <a style="text-decoration:none;"
+                        class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
                         href="/pacientes">
                         <div class="p-5">
                             <div class="flex justify-between">
@@ -182,18 +186,19 @@
                             </div>
                             <div class="ml-2 w-full flex-1">
                                 <div>
-                                    <div class="mt-3 text-3xl font-bold leading-8">{{$total_pacientes}}</div>
+                                    <div class="mt-3 text-3xl font-bold leading-8 text-dark">{{$total_pacientes}}</div>
 
                                     <div class="mt-1 text-base text-gray-600">Pacientes</div>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
+                    <a style="text-decoration:none;"
+                        class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
                         href="#">
                         <div class="p-3">
                             <div class="flex justify-between">
-                                <p class="font-bold text-xl">Tratamientos</p>
+                                <p class="font-bold text-xl text-dark">Tratamientos</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -206,7 +211,7 @@
                                 </div> --}}
 
                             </div>
-                            <div class="m-0 w-full flex-1">
+                            <div class="m-0 w-full flex-1 text-dark">
                                 <div class="flex justify-between">
                                     <div class=" m-0 text-base text-gray-600">Finalizados</div>
                                     <div class="text-xl font-bold leading-8">{{$total_tratamientos_finalizados}}</div>

@@ -20,7 +20,8 @@
                                                             border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
                                                             focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                             duration-150" type="button"
-                            href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Nuevo
+                            href="{{ route('pago.create', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}"
+                            style="text-decoration:none; height: 34px;">Nuevo
                             Pago</a>
                         @else
                         <div>
@@ -31,8 +32,8 @@
                                                                             border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-green-400
                                                                             focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                                             duration-150 mr-3' type=" button"
-                            href="{{ route('tratamiento.index',  $patient->id) }}" style="
-                                                                        height: 34px;">
+                            href="{{ route('tratamiento.index',  $patient->id) }}"
+                            style="text-decoration:none; height: 34px;">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -128,7 +129,7 @@
                                             <tr>
                                                 <th scope="col"
                                                     class="text-sm font-medium text-white px-6 py-4 text-left">
-                                                    <a>Nro</a>
+                                                    Nro
                                                 </th>
                                                 <th scope="col"
                                                     class="text-sm font-medium text-white px-6 py-4 text-left">Abonado
@@ -218,8 +219,8 @@
                                                                                                                     border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-gray-600
                                                                                                                     focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                                                                                     duration-150"
-                            type="button"
-                            href="{{ route('tratamiento.finalizar', [$patient->id, $tratamiento->id]) }}">Finalizar
+                            type="button" href="{{ route('tratamiento.finalizar', [$patient->id, $tratamiento->id]) }}"
+                            style="text-decoration:none; height: 34px;">Finalizar
                             Tratamiento</a>
                         @else
 

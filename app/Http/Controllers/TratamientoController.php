@@ -16,9 +16,9 @@ class TratamientoController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
- public function index(Request $request, Patient $patient)
+ public function index(Patient $patient)
  {
-  $tratamientos = $patient->tratamientos()->paginate(5);
+  $tratamientos = $patient->tratamientos()->get();
   foreach ($tratamientos as $tratamiento) {
    $abonado         = 0;
    $saldo_pendiente = $tratamiento->costo;
@@ -33,9 +33,8 @@ class TratamientoController extends Controller
    $tratamiento->abonado         = $abonado;
    $tratamiento->saldo_pendiente = $saldo_pendiente;
   }
-  $page = $tratamientos->currentPage();
 
-  return view('tratamiento.index', compact('tratamientos', 'patient', 'page'));
+  return view('tratamiento.index', compact('tratamientos', 'patient'));
 
  }
 

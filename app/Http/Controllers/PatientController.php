@@ -7,28 +7,16 @@ use App\Models\Pago;
 use App\Models\Patient;
 use App\Models\Tratamiento;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PatientController extends Controller
 {
 
- public function index(Request $request)
+ public function index()
  {
-  $sort   = $request->input('sort', 'id');
-  $order  = $request->input('order', 'asc');
-  $search = $request->input('search');
 
-  $patients = Patient::where('user_id', auth()->user()->id)
-   ->when($search, function ($query, $search) {
-    return $query->where('nombre', 'like', "%{$search}%")
-     ->orWhere('cedula', 'like', "%{$search}%")
-     ->orWhere('telefono', 'like', "%{$search}%");
-   })
-
-   ->orderBy($sort, $order)
-   ->paginate(5);
-  $deudas = array();
+  $patients = Patient::where('user_id', auth()->user()->id)->get();
+  $deudas   = array();
   foreach ($patients as $patient) {
 
    $deuda = 0;
@@ -44,9 +32,8 @@ class PatientController extends Controller
    }
    $deudas[$patient->id] = $deuda;
   }
-  $page = $patients->currentPage();
 
-  return view('patient.index', compact('patients', 'deudas', 'sort', 'order', 'page'));
+  return view('patient.index', compact('patients', 'deudas'));
  }
 
  public function pdf()

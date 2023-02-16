@@ -11,14 +11,12 @@
                 <div class="flex justify-between">
 
                     <h2 class="text-xl text-gray-900 font-semibold">Nuevo pago</h2>
-                    <a class='inline-flex items-center px-4 py-2 bg-green-500 border
+                    <a style="text-decoration:none;" class='inline-flex items-center px-4 py-2 bg-green-500 border
                                                                                                 border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-green-400
                                                                                                 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                                                                 duration-150 mr-3'
                         type=" button"
-                        href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}"
-                        style="
-                                                                                            height: 34px;">
+                        href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -71,13 +69,11 @@
                         <x-primary-button class="mt-3 ml-3">
                             {{ __('Guardar') }}
                         </x-primary-button>
-                        <a class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
+                        <a style="text-decoration:none;" style="text-decoration:none;" class='inline-flex items-center px-4 mt-3 py-2 bg-red-600 border
                                                         border-gray-300 rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm hover:bg-red-400
                                                         focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out
                                                         duration-150 mr-3' type=" button"
-                            href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}"
-                            style="
-                                                    height: 34px;">
+                            href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">
                             Cancelar</a>
                     </div>
 
