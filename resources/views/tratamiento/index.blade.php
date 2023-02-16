@@ -59,43 +59,43 @@
                             <th scope="col">
                                 Estado
                             <th scope="col">
-                                Ver</th>
+                                Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($tratamientos as $key => $tratamiento)
                         <tr>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $key + 1
                                 }}</td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $tratamiento->tratamiento
                                 }}</td>
                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{
                                 $patient->fecha_nacimiento }}</td>
                             --}}
-                            <td>
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                                 {{ date('d/m/Y', strtotime($tratamiento->fecha_inicio)) }}
                             </td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $tratamiento->costo }}
                             </td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 number_format($tratamiento->abonado(),2)
                                 }}</td>
 
                             @if ($tratamiento->saldoPendiente() == 0)
-                            <td>Pagado</td>
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">Pagado</td>
                             @else
                             <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 number_format($tratamiento->saldoPendiente(),2) }}</td>
                             @endif
                             @if ($tratamiento->estado == 0)
-                            <td> <span class="bg-orange-400">En
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap"> <span class="bg-orange-400">En
                                     curso</span>
                             </td>
                             @else
-                            <td>Finalizado
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">Finalizado
                             </td>
                             @endif
 
@@ -109,6 +109,12 @@
                                                         hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
                                                         focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150" type="button"
                                     href="{{ route('tratamiento.show', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id]) }}">Ver</a>
+                                <a style="text-decoration:none;" class=" inline-flex items-center px-4 py-2 bg-blue-500 border border-gray-300
+                                     rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm
+                                     hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400
+                                     focus:ring-offset-2 disabled:opacity-25 transition"
+                                    href="{{ route('tratamiento.edit', ['patient'=> $patient->id, 'tratamiento' => $tratamiento]) }}">Editar</a>
+
                             </td>
 
                         </tr>

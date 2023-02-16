@@ -100,9 +100,10 @@ class TratamientoController extends Controller
   * @param  \App\Models\Tratamiento  $tratamiento
   * @return \Illuminate\Http\Response
   */
- public function edit(Tratamiento $tratamiento)
+ public function edit(Patient $patient, Tratamiento $tratamiento)
  {
-  //
+
+  return view('tratamiento.edit', compact('patient', 'tratamiento'));
  }
 
  /**
@@ -112,9 +113,25 @@ class TratamientoController extends Controller
   * @param  \App\Models\Tratamiento  $tratamiento
   * @return \Illuminate\Http\Response
   */
- public function update(Request $request, Tratamiento $tratamiento)
+ public function update(TratamientoFormRequest $request, Patient $patient, Tratamiento $tratamiento)
  {
-  //
+
+  $data = $request->validated();
+  $rx   = request()->has('rx') ? 1 : 0;
+
+  $tratamiento->diente        = $data['diente'];
+  $tratamiento->diagnostico   = $data['diagnostico'];
+  $tratamiento->rx            = $rx;
+  $tratamiento->tratamiento   = $data['tratamiento'];
+  $tratamiento->costo         = $data['costo'];
+  $tratamiento->fecha_inicio  = $data['fecha_inicio'];
+  $tratamiento->fecha_fin     = $data['fecha_fin'] ?? null;
+  $tratamiento->observaciones = $data['observaciones' ?? null];
+
+  $patient->tratamientos()->save($tratamiento);
+
+  return redirect()->route('tratamiento.index', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id])->with('success', 'Tratamiento actualizado');
+
  }
 
  /**

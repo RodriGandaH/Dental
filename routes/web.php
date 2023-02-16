@@ -53,6 +53,8 @@ Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->nam
   Route::get('/pacientes/{patient}/tratamientos/nuevo', [TratamientoController::class, 'create'])->name('tratamiento.create');
   Route::post('/pacientes/{patient}/tratamientos/nuevo', [TratamientoController::class, 'store'])->name('tratamiento.store');
   Route::get('/pacientes/{patient}/tratamientos/{tratamiento}', [TratamientoController::class, 'show'])->name('tratamiento.show');
+  Route::get('/pacientes/{patient}/tratamientos/{tratamiento}/edit', [TratamientoController::class, 'edit'])->name('tratamiento.edit');
+  Route::patch('/pacientes/{patient}/tratamientos/{tratamiento}', [TratamientoController::class, 'update'])->name('tratamiento.update');
   Route::get('/pacientes/{patient}/tratamientos/{tratamiento}/finalizar', [TratamientoController::class, 'finalizarTratamiento'])->name('tratamiento.finalizar');
 
  });
@@ -63,7 +65,7 @@ Route::delete('/patients/{patient}', [PatientController::class, 'destroy'])->nam
   Route::post('/pacientes/{patient}/tratamientos/{tratamiento}/pagos/nuevo', [PagoController::class, 'store'])->name('pago.store');
   Route::get('/pacientes/{patient}/tratamientos/{tratamiento}/pago/{id}', [PagoController::class, 'show'])->name('pago.show');
   Route::get('/pacientes/{patient}/tratamientos/{tratamiento}/pago/{id}/edit', [PagoController::class, 'edit'])->name('pago.edit');
-  Route::patch('/pacientes/{patient}/tratamientos/{tratamiento}/pago/{id}', [PagoController::class, 'update'])->name('pago.update');
+  Route::put('/pacientes/{patient}/tratamientos/{tratamiento}/pago/{id}', [PagoController::class, 'update'])->name('pago.update');
   Route::delete('/pacientes/{patient}/tratamientos/{tratamiento}/pago/{id}', [PagoController::class, 'destroy'])->name('pago.destroy');
  });
 

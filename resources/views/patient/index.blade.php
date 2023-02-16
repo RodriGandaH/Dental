@@ -61,27 +61,27 @@ duration-150" type="button" href="/nuevo-paciente">Nuevo
                     <tbody>
                         @foreach ($patients as $key => $patient)
                         <tr>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $key + 1
                                 }}</td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $patient->nombre }}</td>
                             {{-- <td class="py-4 px-6 border-b border-gray-200">{{
                                 $patient->fecha_nacimiento }}</td>
                             --}}
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $patient->cedula }}</td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $patient->telefono }}</td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $patient->direccion }}
                             </td>
-                            <td>{{
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">{{
                                 $deudas[$patient->id] }}
                             </td>
 
 
-                            <td class="py-4 px-6 border-b border-gray-200">
+                            <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                                 <a style="text-decoration:none;" class="inline-flex items-center px-4 py-2 bg-slate-600 border border-gray-300
                                     rounded-md font-semibold text-xs text-white uppercase tracking-widest shadow-sm
                                     hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
