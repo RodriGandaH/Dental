@@ -1,4 +1,5 @@
 import "./bootstrap";
+import "../css/app.css";
 // Import de estilos de Bootstrap 5 y Datatables
 import "bootstrap/dist/css/bootstrap.min.css";
 import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
