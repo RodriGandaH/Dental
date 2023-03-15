@@ -131,15 +131,17 @@ class TratamientoController extends Controller
 
         //actualizar columna costo en la tabla pagos con el nuevo valor de pago de la tabla tratamiento
 
-        /*     $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->get();
-
+        $pagos = $tratamiento->pagos()->where('patient_id', $patient->id)->get();
+        $cantidad_pagada = $pagos->sum('abono');
         foreach ($pagos as $pago) {
             $pago->costo = $tratamiento->costo;
+            $pago->saldo_pendiente = $tratamiento->costo - $cantidad_pagada;
             $pago->save();
-            dd($pago);
         }
 
- */
+
+
+
         return redirect()->route('tratamiento.index', ['patient' => $patient->id, 'tratamiento' => $tratamiento->id])->with('success', 'Tratamiento actualizado');
     }
 
