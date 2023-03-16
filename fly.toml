@@ -1,8 +1,9 @@
-# fly.toml file generated for odontoapp on 2023-02-09T10:55:26-04:00
+# fly.toml file generated for odontonet on 2023-03-16T11:18:47-04:00
 
-app = "odontoapp"
+app = "odontonet"
 kill_signal = "SIGINT"
 kill_timeout = 5
+primary_region = "scl"
 processes = []
 
 [build]
@@ -14,21 +15,20 @@ processes = []
   release_command = "php /var/www/html/artisan migrate --force"
 
 [env]
-  APP_NAME="OdontoApp"
   APP_ENV = "production"
+  APP_NAME = "OdontoNet"
   DB_CONNECTION = "pgsql"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
-
-  MAIL_MAILER="smtp"
-  MAIL_HOST="smtp-mail.outlook.com"
-  MAIL_PORT="587"
-  MAIL_USERNAME="rodrigo.gandarillas.heredia@outlook.com"
-  MAIL_PASSWORD="rodri170495"
-  MAIL_ENCRYPTION="STARTTLS"
-  MAIL_FROM_ADDRESS="rodrigo.gandarillas.heredia@outlook.com"
-  MAIL_FROM_NAME="OdontoApp"
+  MAIL_ENCRYPTION = "STARTTLS"
+  MAIL_FROM_ADDRESS = "rodrigo.gandarillas.heredia@outlook.com"
+  MAIL_FROM_NAME = "OdontoNet"
+  MAIL_HOST = "smtp-mail.outlook.com"
+  MAIL_MAILER = "smtp"
+  MAIL_PASSWORD = "rodri170495"
+  MAIL_PORT = "587"
+  MAIL_USERNAME = "rodrigo.gandarillas.heredia@outlook.com"
 
 [experimental]
   auto_rollback = true

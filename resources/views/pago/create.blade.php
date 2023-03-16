@@ -99,11 +99,11 @@
             icon: 'error',
             confirmButtonText: 'Aceptar'
         }) }
-        if(monto_abono.value<0){
+        if(monto_abono.value<=0){
             event.preventDefault();
             Swal.fire ({
             title: 'Error',
-            text: 'El monto del abono no puede ser menor a 0 Bs.',
+            text: 'El monto del abono no puede ser menor o igual a 0 Bs.',
             icon: 'error',
             confirmButtonText: 'Aceptar'
         })
